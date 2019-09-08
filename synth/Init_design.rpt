@@ -1,0 +1,64 @@
+@file(synth_mtmAlu.tcl) 50: puts "--------------------------------------------------------------------------------"
+--------------------------------------------------------------------------------
+@file(synth_mtmAlu.tcl) 51: puts "-- INIT DESIGN -----------------------------------------------------------------"
+-- INIT DESIGN -----------------------------------------------------------------
+@file(synth_mtmAlu.tcl) 52: puts "--------------------------------------------------------------------------------"
+--------------------------------------------------------------------------------
+@file(synth_mtmAlu.tcl) 53: init_design
+Started checking and loading power intent for design mtm_Alu...
+===============================================================
+No power intent for design 'mtm_Alu'.
+Completed checking and loading power intent for design mtm_Alu (runtime 0.00s).
+===============================================================================
+#
+# Reading SDC ./constraints/mtmAlu.sdc for view:WC_av (constraint_mode:standard_cm)
+#
+Info    : Removed object. [TUI-58]
+        : Removed external_delay 'external_delay:mtm_Alu/WC_av/create_clock_delay_domain_1__clk_R_0'.
+Info    : Removed object. [TUI-58]
+        : Removed external_delay 'external_delay:mtm_Alu/WC_av/create_clock_delay_domain_1__clk_F_0'.
+Error   : A required object parameter could not be found. [TUI-61] [parse_options]
+        : An object of type 'clock' named 'clk' could not be found.
+        : Check to make sure that the object exists and is of the correct type.  The 'what_is' command can be used to determine the type of an object.
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The 'read_sdc' command encountered an error while processing this command on line '66' of the SDC file './constraints/mtmAlu.sdc': set_output_delay -clock clk -max 10 [get_ports sout].
+        : The 'read_sdc' command encountered a problem while trying to evaluate an SDC command. This SDC command will be added to the Tcl variable $::dc::sdc_failed_commands.
+Statistics for commands executed by read_sdc:
+ "all_inputs"               - successful      4 , failed      0 (runtime  0.00)
+ "all_outputs"              - successful      2 , failed      0 (runtime  0.00)
+ "create_clock"             - successful      1 , failed      0 (runtime  0.00)
+ "get_clocks"               - successful      2 , failed      0 (runtime  0.00)
+ "get_ports"                - successful      2 , failed      0 (runtime  0.00)
+ "set_clock_uncertainty"    - successful      2 , failed      0 (runtime  0.00)
+ "set_dont_use"             - successful      8 , failed      0 (runtime  0.00)
+ "set_driving_cell"         - successful      1 , failed      0 (runtime  0.00)
+ "set_input_delay"          - successful      1 , failed      0 (runtime  0.00)
+ "set_input_transition"     - successful      1 , failed      0 (runtime  0.00)
+ "set_load"                 - successful      1 , failed      0 (runtime  0.00)
+ "set_load_unit"            - successful      1 , failed      0 (runtime  0.00)
+ "set_max_fanout"           - successful      1 , failed      0 (runtime  0.00)
+ "set_output_delay"         - successful      2 , failed      1 (runtime  0.00)
+ "set_time_unit"            - successful      1 , failed      0 (runtime  0.00)
+ "set_units"                - successful      2 , failed      0 (runtime  0.00)
+Warning : Total failed commands during read_sdc are 1
+Warning : One or more commands failed when these constraints were applied. [SDC-209]
+        : The 'read_sdc' command encountered a problem while processing commands.
+        : You can examine the failed commands or save them to a file by querying the Tcl variable $::dc::sdc_failed_commands.
+Total runtime 0
+
+  According to qrc_tech_file, there are total 6 routing layers [ V(3) / H(3) ]
+
+
+  According to qrc_tech_file, there are total 6 routing layers [ V(3) / H(3) ]
+
+
+  According to qrc_tech_file, there are total 6 routing layers [ V(3) / H(3) ]
+
+  Setting attribute of root '/': 'read_qrc_tech_file_rc_corner' = true
+@file(synth_mtmAlu.tcl) 54: suspend
+
+Execution has been suspended temporarily.
+Enter 'resume' to continue.
+Enter 'stop_suspend' to stop script execution
+[SUSPEND]genus:root: 0> 
+

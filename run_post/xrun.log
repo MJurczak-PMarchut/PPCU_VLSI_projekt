@@ -1,0 +1,7094 @@
+xrun: 18.09-s011: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
+TOOL:	xrun	18.09-s011: Started on Sep 08, 2019 at 22:53:27 CEST
+xrun
+	-F mtm_Alu_post.f
+		-F ./../run/mtm_Alu.f
+			../tb/mtm_Alu_test_top.v
+			../tb/mtm_Alu_tb.v
+			-y ../rtl
+			+libext+.v
+			-nowarn DLNOHV
+			-nowarn DLCLAP
+			-nowarn DSEM2009
+			-nowarn DSEMEL
+			-timescale 1ns/1ps
+			-vtimescale 1ns/1ps
+		+libext+.v
+		-v /cad/dk/umc180/SUS/verilog/UCLLIB_AGH.v
+	+access+r
+	+neg_check
+	-maxdelays
+	+sdf_file+/home/student/pmarchut/Pobrane/projekt/run_post/mtm_Alu.sdf.gz.X
+	+xmsdf_cmd_file+/home/student/pmarchut/Pobrane/projekt/run_post/mtm_Alu.sdfcmd
+	-ncinitialize rand_2state:56
+	../pr/RESULTS_PR/mtm_Alu.noPower.v.gz
+	-tcl
+	-input tcl/dumptcf.tcl
+
+   User defined plus("+") options:
+	+neg_check
+
+xrun: *W,OPDEPRREN: Command Line Option (-ncinitialize) is deprecated. Use (-xminitialize) instead.
+Recompiling... reason: file './mtm_Alu.sdfcmd' is newer than expected.
+	expected: Sun Sep  8 22:52:54 2019
+	actual:   Sun Sep  8 22:53:27 2019
+file: /cad/dk/umc180/SUS/verilog/UCLLIB_AGH.v
+xmvlog: *W,LIBNOU: Library "./../run/../rtl" given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+		Caching library 'UCLLIB_AGH' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+   mtm_Alu_deserializer u_mtm_Alu_deserializer (.rst_n(rst_n),
+                                             |
+xmelab: *W,CUVWSI (../pr/RESULTS_PR/mtm_Alu.noPower.v.gz,4730|45): 1 input port was not connected:
+xmelab: (../pr/RESULTS_PR/mtm_Alu.noPower.v.gz,2230): data_ready_in
+
+	Top level design units:
+		mtm_Alu_test_top
+	Annotating SDF timing data:
+		Compiled SDF file:     /home/student/pmarchut/Pobrane/projekt/run_post/mtm_Alu.sdf.gz.X
+		Log file:              mtm_Alu_sdf.log
+		Backannotation scope:  mtm_Alu_test_top.DUT
+		Configuration file:    
+		MTM control:           TOOL_CONTROL
+		Scale factors:         
+		Scale type:            
+	Annotation completed successfully...
+	SDF statistics: No. of Pathdelays = 2642  Annotated = 100.00% -- No. of Tchecks = 1066  Annotated = 100.00% 
+				        Total 	   Annotated	  Percentage
+		 Path Delays	        2642	        2642	      100.00
+		      $width	         533	         533	      100.00
+		     $recrem	         177	         177	      100.00
+		  $setuphold	         356	         356	      100.00
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	.B({ FE_UNCONNECTEDZ_1,
+	                     |
+xmelab: *W,CSINFI (../pr/RESULTS_PR/mtm_Alu.noPower.v.gz,4677|22): implicit wire has no fanin (mtm_Alu_test_top.DUT.FE_UNCONNECTEDZ_1).
+   mtm_Alu_core u_mtm_Alu_core (.A({ FE_UNCONNECTEDZ_0,
+                                                     |
+xmelab: *W,CSINFI (../pr/RESULTS_PR/mtm_Alu.noPower.v.gz,4644|53): implicit wire has no fanin (mtm_Alu_test_top.DUT.FE_UNCONNECTEDZ_0).
+		FE_UNCONNECTEDZ_2 }),
+		                |
+xmelab: *W,CSINFI (../pr/RESULTS_PR/mtm_Alu.noPower.v.gz,4778|18): implicit wire has no fanin (mtm_Alu_test_top.DUT.FE_UNCONNECTEDZ_2).
+	.B({ FE_UNCONNECTEDZ_1,
+	                     |
+xmelab: *W,CSINFI (../pr/RESULTS_PR/mtm_Alu.noPower.v.gz,972|22): implicit wire has no fanin (mtm_Alu_test_top.DUT.u_mtm_Alu_core.FE_UNCONNECTEDZ_1).
+   add_unsigned_279 add_50_39 (.A({ FE_UNCONNECTEDZ_0,
+                                                    |
+xmelab: *W,CSINFI (../pr/RESULTS_PR/mtm_Alu.noPower.v.gz,939|52): implicit wire has no fanin (mtm_Alu_test_top.DUT.u_mtm_Alu_core.FE_UNCONNECTEDZ_0).
+	.B({ FE_UNCONNECTEDZ_3,
+	                     |
+xmelab: *W,CSINFI (../pr/RESULTS_PR/mtm_Alu.noPower.v.gz,1071|22): implicit wire has no fanin (mtm_Alu_test_top.DUT.u_mtm_Alu_core.FE_UNCONNECTEDZ_3).
+   sub_unsigned_277 sub_56_39 (.A({ FE_UNCONNECTEDZ_2,
+                                                    |
+xmelab: *W,CSINFI (../pr/RESULTS_PR/mtm_Alu.noPower.v.gz,1038|52): implicit wire has no fanin (mtm_Alu_test_top.DUT.u_mtm_Alu_core.FE_UNCONNECTEDZ_2).
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                    Instances  Unique
+		Modules:                  868      40
+		UDPs:                     445       5
+		Primitives:              2362       6
+		Timing outputs:          1098      13
+		Registers:                244      72
+		Scalar wires:            1281       -
+		Always blocks:              2       2
+		Initial blocks:             5       5
+		Cont. assignments:          0       1
+		Timing checks:           1599     379
+		Interconnect:            2283      27
+		Delayed tcheck signals:   533     215
+		Simulation timescale:     1ps
+	Writing initial simulation snapshot: worklib.mtm_Alu_test_top:v
+Loading snapshot worklib.mtm_Alu_test_top:v .................... Done
+xcelium> source /cad/XCELIUM1809/tools/xcelium/files/xmsimrc
+xcelium> # dump net switching activity into a file
+xcelium> # (to be used for dynamic power estimation)
+xcelium> dumptcf \
+>   -scope DUT \
+>   -overwrite \
+>   -dumpwireasnet \
+>   -output RESULTS/mtm_Alu.tcf
+xcelium> 
+xcelium> # run simulation
+xcelium> run
+If simulation ends before the testbench
+completes, use the menu option to run all.
+Prepare to wait a long time...
+Test Case    0 
+A = 00000000
+B = 00000000
+C = 00000000
+Result = 000000000
+Flag = 0010
+PASS
+Test Case    1 
+A = 00000001
+B = 00000000
+C = 00000001
+Result = 000000001
+Flag = 0000
+PASS
+Test Case    2 
+A = 00000000
+B = 00000000
+C = 00000000
+Result = 000000000
+Flag = 0010
+PASS
+Test Case    3 
+A = ffffffff
+B = 00000000
+C = ffffffff
+Result = 0ffffffff
+Flag = 0001
+PASS
+Test Case    4 
+A = 00000000
+B = ffffffff
+C = 00000001
+Result = 100000001
+Flag = 1000
+PASS
+Test Case    5 
+A = ffffffff
+B = 00000000
+C = ffffffff
+Result = 0ffffffff
+Flag = 0001
+PASS
+Test Case    6 
+A = ffffffff
+B = 00000000
+C = 00000000
+Result = 000000000
+Flag = 0010
+PASS
+Test Case    7 
+A = ffffffff
+B = 00000000
+C = ffffffff
+Result = 0ffffffff
+Flag = 0001
+PASS
+Test Case    8 
+A = ffffffff
+B = ffffffff
+C = ffffffff
+Result = 0ffffffff
+Flag = 0001
+PASS
+Test Case    9 
+A = ffffffff
+B = ffffffff
+C = fffffffe
+Result = 1fffffffe
+Flag = 1001
+PASS
+Test Case   10 
+A = ffffffff
+B = ffffffff
+C = 00000000
+Result = 000000000
+Flag = 0010
+PASS
+Test Case   11 
+PASS
+Test Case   12 
+PASS
+Test Case   13 
+PASS
+Test Case   14 
+PASS
+Test Case   15 
+PASS
+Test Case   16 
+A = ffffff7f
+B = 00000010
+C = ffffff8f
+Result = 0ffffff8f
+Flag = 0001
+PASS
+Test Case   17 
+A = ffffff77
+B = 00000011
+C = ffffff66
+Result = 0ffffff66
+Flag = 0001
+PASS
+Test Case   18 
+A = ffffff6f
+B = 00000012
+C = 00000002
+Result = 000000002
+Flag = 0000
+PASS
+Test Case   19 
+A = ffffff67
+B = 00000013
+C = ffffff77
+Result = 0ffffff77
+Flag = 0001
+PASS
+Test Case   20 
+A = ffffff5f
+B = 00000014
+C = ffffff73
+Result = 0ffffff73
+Flag = 0001
+PASS
+Test Case   21 
+A = ffffff57
+B = 00000015
+C = ffffff42
+Result = 0ffffff42
+Flag = 0001
+PASS
+Test Case   22 
+A = ffffff4f
+B = 00000016
+C = 00000006
+Result = 000000006
+Flag = 0000
+PASS
+Test Case   23 
+A = ffffff47
+B = 00000017
+C = ffffff57
+Result = 0ffffff57
+Flag = 0001
+PASS
+Test Case   24 
+A = ffffff3f
+B = 00000018
+C = ffffff57
+Result = 0ffffff57
+Flag = 0001
+PASS
+Test Case   25 
+A = ffffff37
+B = 00000019
+C = ffffff1e
+Result = 0ffffff1e
+Flag = 0001
+PASS
+Test Case   26 
+A = ffffff2f
+B = 0000001a
+C = 0000000a
+Result = 00000000a
+Flag = 0000
+PASS
+Test Case   27 
+A = ffffff27
+B = 0000001b
+C = ffffff3f
+Result = 0ffffff3f
+Flag = 0001
+PASS
+Test Case   28 
+A = ffffff1f
+B = 0000001c
+C = ffffff3b
+Result = 0ffffff3b
+Flag = 0001
+PASS
+Test Case   29 
+A = ffffff17
+B = 0000001d
+C = fffffefa
+Result = 0fffffefa
+Flag = 0001
+PASS
+Test Case   30 
+A = ffffff0f
+B = 0000001e
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case   31 
+A = ffffff07
+B = 0000001f
+C = ffffff1f
+Result = 0ffffff1f
+Flag = 0001
+PASS
+Test Case   32 
+A = fffffeff
+B = 00000020
+C = ffffff1f
+Result = 0ffffff1f
+Flag = 0001
+PASS
+Test Case   33 
+A = fffffef7
+B = 00000021
+C = fffffed6
+Result = 0fffffed6
+Flag = 0001
+PASS
+Test Case   34 
+A = fffffeef
+B = 00000022
+C = 00000022
+Result = 000000022
+Flag = 0000
+PASS
+Test Case   35 
+A = fffffee7
+B = 00000023
+C = fffffee7
+Result = 0fffffee7
+Flag = 0001
+PASS
+Test Case   36 
+A = fffffedf
+B = 00000024
+C = ffffff03
+Result = 0ffffff03
+Flag = 0001
+PASS
+Test Case   37 
+A = fffffed7
+B = 00000025
+C = fffffeb2
+Result = 0fffffeb2
+Flag = 0001
+PASS
+Test Case   38 
+A = fffffecf
+B = 00000026
+C = 00000006
+Result = 000000006
+Flag = 0000
+PASS
+Test Case   39 
+A = fffffec7
+B = 00000027
+C = fffffee7
+Result = 0fffffee7
+Flag = 0001
+PASS
+Test Case   40 
+A = fffffebf
+B = 00000028
+C = fffffee7
+Result = 0fffffee7
+Flag = 0001
+PASS
+Test Case   41 
+A = fffffeb7
+B = 00000029
+C = fffffe8e
+Result = 0fffffe8e
+Flag = 0001
+PASS
+Test Case   42 
+A = fffffeaf
+B = 0000002a
+C = 0000002a
+Result = 00000002a
+Flag = 0000
+PASS
+Test Case   43 
+A = fffffea7
+B = 0000002b
+C = fffffeaf
+Result = 0fffffeaf
+Flag = 0001
+PASS
+Test Case   44 
+A = fffffe9f
+B = 0000002c
+C = fffffecb
+Result = 0fffffecb
+Flag = 0001
+PASS
+Test Case   45 
+A = fffffe97
+B = 0000002d
+C = fffffe6a
+Result = 0fffffe6a
+Flag = 0001
+PASS
+Test Case   46 
+A = fffffe8f
+B = 0000002e
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case   47 
+A = fffffe87
+B = 0000002f
+C = fffffeaf
+Result = 0fffffeaf
+Flag = 0001
+PASS
+Test Case   48 
+A = fffffe7f
+B = 00000030
+C = fffffeaf
+Result = 0fffffeaf
+Flag = 0001
+PASS
+Test Case   49 
+A = fffffe77
+B = 00000031
+C = fffffe46
+Result = 0fffffe46
+Flag = 0001
+PASS
+Test Case   50 
+A = fffffe6f
+B = 00000032
+C = 00000022
+Result = 000000022
+Flag = 0000
+PASS
+Test Case   51 
+A = fffffe67
+B = 00000033
+C = fffffe77
+Result = 0fffffe77
+Flag = 0001
+PASS
+Test Case   52 
+A = fffffe5f
+B = 00000034
+C = fffffe93
+Result = 0fffffe93
+Flag = 0001
+PASS
+Test Case   53 
+A = fffffe57
+B = 00000035
+C = fffffe22
+Result = 0fffffe22
+Flag = 0001
+PASS
+Test Case   54 
+A = fffffe4f
+B = 00000036
+C = 00000006
+Result = 000000006
+Flag = 0000
+PASS
+Test Case   55 
+A = fffffe47
+B = 00000037
+C = fffffe77
+Result = 0fffffe77
+Flag = 0001
+PASS
+Test Case   56 
+A = fffffe3f
+B = 00000038
+C = fffffe77
+Result = 0fffffe77
+Flag = 0001
+PASS
+Test Case   57 
+A = fffffe37
+B = 00000039
+C = fffffdfe
+Result = 0fffffdfe
+Flag = 0001
+PASS
+Test Case   58 
+A = fffffe2f
+B = 0000003a
+C = 0000002a
+Result = 00000002a
+Flag = 0000
+PASS
+Test Case   59 
+A = fffffe27
+B = 0000003b
+C = fffffe3f
+Result = 0fffffe3f
+Flag = 0001
+PASS
+Test Case   60 
+A = fffffe1f
+B = 0000003c
+C = fffffe5b
+Result = 0fffffe5b
+Flag = 0001
+PASS
+Test Case   61 
+A = fffffe17
+B = 0000003d
+C = fffffdda
+Result = 0fffffdda
+Flag = 0001
+PASS
+Test Case   62 
+A = fffffe0f
+B = 0000003e
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case   63 
+A = fffffe07
+B = 0000003f
+C = fffffe3f
+Result = 0fffffe3f
+Flag = 0001
+PASS
+Test Case   64 
+A = fffffdff
+B = 00000040
+C = fffffe3f
+Result = 0fffffe3f
+Flag = 0001
+PASS
+Test Case   65 
+A = fffffdf7
+B = 00000041
+C = fffffdb6
+Result = 0fffffdb6
+Flag = 0001
+PASS
+Test Case   66 
+A = fffffdef
+B = 00000042
+C = 00000042
+Result = 000000042
+Flag = 0000
+PASS
+Test Case   67 
+A = fffffde7
+B = 00000043
+C = fffffde7
+Result = 0fffffde7
+Flag = 0001
+PASS
+Test Case   68 
+A = fffffddf
+B = 00000044
+C = fffffe23
+Result = 0fffffe23
+Flag = 0001
+PASS
+Test Case   69 
+A = fffffdd7
+B = 00000045
+C = fffffd92
+Result = 0fffffd92
+Flag = 0001
+PASS
+Test Case   70 
+A = fffffdcf
+B = 00000046
+C = 00000046
+Result = 000000046
+Flag = 0000
+PASS
+Test Case   71 
+A = fffffdc7
+B = 00000047
+C = fffffdc7
+Result = 0fffffdc7
+Flag = 0001
+PASS
+Test Case   72 
+A = fffffdbf
+B = 00000048
+C = fffffe07
+Result = 0fffffe07
+Flag = 0001
+PASS
+Test Case   73 
+A = fffffdb7
+B = 00000049
+C = fffffd6e
+Result = 0fffffd6e
+Flag = 0001
+PASS
+Test Case   74 
+A = fffffdaf
+B = 0000004a
+C = 0000000a
+Result = 00000000a
+Flag = 0000
+PASS
+Test Case   75 
+A = fffffda7
+B = 0000004b
+C = fffffdef
+Result = 0fffffdef
+Flag = 0001
+PASS
+Test Case   76 
+A = fffffd9f
+B = 0000004c
+C = fffffdeb
+Result = 0fffffdeb
+Flag = 0001
+PASS
+Test Case   77 
+A = fffffd97
+B = 0000004d
+C = fffffd4a
+Result = 0fffffd4a
+Flag = 0001
+PASS
+Test Case   78 
+A = fffffd8f
+B = 0000004e
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case   79 
+A = fffffd87
+B = 0000004f
+C = fffffdcf
+Result = 0fffffdcf
+Flag = 0001
+PASS
+Test Case   80 
+A = fffffd7f
+B = 00000050
+C = fffffdcf
+Result = 0fffffdcf
+Flag = 0001
+PASS
+Test Case   81 
+A = fffffd77
+B = 00000051
+C = fffffd26
+Result = 0fffffd26
+Flag = 0001
+PASS
+Test Case   82 
+A = fffffd6f
+B = 00000052
+C = 00000042
+Result = 000000042
+Flag = 0000
+PASS
+Test Case   83 
+A = fffffd67
+B = 00000053
+C = fffffd77
+Result = 0fffffd77
+Flag = 0001
+PASS
+Test Case   84 
+A = fffffd5f
+B = 00000054
+C = fffffdb3
+Result = 0fffffdb3
+Flag = 0001
+PASS
+Test Case   85 
+A = fffffd57
+B = 00000055
+C = fffffd02
+Result = 0fffffd02
+Flag = 0001
+PASS
+Test Case   86 
+A = fffffd4f
+B = 00000056
+C = 00000046
+Result = 000000046
+Flag = 0000
+PASS
+Test Case   87 
+A = fffffd47
+B = 00000057
+C = fffffd57
+Result = 0fffffd57
+Flag = 0001
+PASS
+Test Case   88 
+A = fffffd3f
+B = 00000058
+C = fffffd97
+Result = 0fffffd97
+Flag = 0001
+PASS
+Test Case   89 
+A = fffffd37
+B = 00000059
+C = fffffcde
+Result = 0fffffcde
+Flag = 0001
+PASS
+Test Case   90 
+A = fffffd2f
+B = 0000005a
+C = 0000000a
+Result = 00000000a
+Flag = 0000
+PASS
+Test Case   91 
+A = fffffd27
+B = 0000005b
+C = fffffd7f
+Result = 0fffffd7f
+Flag = 0001
+PASS
+Test Case   92 
+A = fffffd1f
+B = 0000005c
+C = fffffd7b
+Result = 0fffffd7b
+Flag = 0001
+PASS
+Test Case   93 
+A = fffffd17
+B = 0000005d
+C = fffffcba
+Result = 0fffffcba
+Flag = 0001
+PASS
+Test Case   94 
+A = fffffd0f
+B = 0000005e
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case   95 
+A = fffffd07
+B = 0000005f
+C = fffffd5f
+Result = 0fffffd5f
+Flag = 0001
+PASS
+Test Case   96 
+A = fffffcff
+B = 00000060
+C = fffffd5f
+Result = 0fffffd5f
+Flag = 0001
+PASS
+Test Case   97 
+A = fffffcf7
+B = 00000061
+C = fffffc96
+Result = 0fffffc96
+Flag = 0001
+PASS
+Test Case   98 
+A = fffffcef
+B = 00000062
+C = 00000062
+Result = 000000062
+Flag = 0000
+PASS
+Test Case   99 
+A = fffffce7
+B = 00000063
+C = fffffce7
+Result = 0fffffce7
+Flag = 0001
+PASS
+Test Case  100 
+A = fffffcdf
+B = 00000064
+C = fffffd43
+Result = 0fffffd43
+Flag = 0001
+PASS
+Test Case  101 
+A = fffffcd7
+B = 00000065
+C = fffffc72
+Result = 0fffffc72
+Flag = 0001
+PASS
+Test Case  102 
+A = fffffccf
+B = 00000066
+C = 00000046
+Result = 000000046
+Flag = 0000
+PASS
+Test Case  103 
+A = fffffcc7
+B = 00000067
+C = fffffce7
+Result = 0fffffce7
+Flag = 0001
+PASS
+Test Case  104 
+A = fffffcbf
+B = 00000068
+C = fffffd27
+Result = 0fffffd27
+Flag = 0001
+PASS
+Test Case  105 
+A = fffffcb7
+B = 00000069
+C = fffffc4e
+Result = 0fffffc4e
+Flag = 0001
+PASS
+Test Case  106 
+A = fffffcaf
+B = 0000006a
+C = 0000002a
+Result = 00000002a
+Flag = 0000
+PASS
+Test Case  107 
+A = fffffca7
+B = 0000006b
+C = fffffcef
+Result = 0fffffcef
+Flag = 0001
+PASS
+Test Case  108 
+A = fffffc9f
+B = 0000006c
+C = fffffd0b
+Result = 0fffffd0b
+Flag = 0001
+PASS
+Test Case  109 
+A = fffffc97
+B = 0000006d
+C = fffffc2a
+Result = 0fffffc2a
+Flag = 0001
+PASS
+Test Case  110 
+A = fffffc8f
+B = 0000006e
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case  111 
+A = fffffc87
+B = 0000006f
+C = fffffcef
+Result = 0fffffcef
+Flag = 0001
+PASS
+Test Case  112 
+A = fffffc7f
+B = 00000070
+C = fffffcef
+Result = 0fffffcef
+Flag = 0001
+PASS
+Test Case  113 
+A = fffffc77
+B = 00000071
+C = fffffc06
+Result = 0fffffc06
+Flag = 0001
+PASS
+Test Case  114 
+A = fffffc6f
+B = 00000072
+C = 00000062
+Result = 000000062
+Flag = 0000
+PASS
+Test Case  115 
+A = fffffc67
+B = 00000073
+C = fffffc77
+Result = 0fffffc77
+Flag = 0001
+PASS
+Test Case  116 
+A = fffffc5f
+B = 00000074
+C = fffffcd3
+Result = 0fffffcd3
+Flag = 0001
+PASS
+Test Case  117 
+A = fffffc57
+B = 00000075
+C = fffffbe2
+Result = 0fffffbe2
+Flag = 0001
+PASS
+Test Case  118 
+A = fffffc4f
+B = 00000076
+C = 00000046
+Result = 000000046
+Flag = 0000
+PASS
+Test Case  119 
+A = fffffc47
+B = 00000077
+C = fffffc77
+Result = 0fffffc77
+Flag = 0001
+PASS
+Test Case  120 
+A = fffffc3f
+B = 00000078
+C = fffffcb7
+Result = 0fffffcb7
+Flag = 0001
+PASS
+Test Case  121 
+A = fffffc37
+B = 00000079
+C = fffffbbe
+Result = 0fffffbbe
+Flag = 0001
+PASS
+Test Case  122 
+A = fffffc2f
+B = 0000007a
+C = 0000002a
+Result = 00000002a
+Flag = 0000
+PASS
+Test Case  123 
+A = fffffc27
+B = 0000007b
+C = fffffc7f
+Result = 0fffffc7f
+Flag = 0001
+PASS
+Test Case  124 
+A = fffffc1f
+B = 0000007c
+C = fffffc9b
+Result = 0fffffc9b
+Flag = 0001
+PASS
+Test Case  125 
+A = fffffc17
+B = 0000007d
+C = fffffb9a
+Result = 0fffffb9a
+Flag = 0001
+PASS
+Test Case  126 
+A = fffffc0f
+B = 0000007e
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case  127 
+A = fffffc07
+B = 0000007f
+C = fffffc7f
+Result = 0fffffc7f
+Flag = 0001
+PASS
+Test Case  128 
+A = fffffbff
+B = 00000080
+C = fffffc7f
+Result = 0fffffc7f
+Flag = 0001
+PASS
+Test Case  129 
+A = fffffbf7
+B = 00000081
+C = fffffb76
+Result = 0fffffb76
+Flag = 0001
+PASS
+Test Case  130 
+A = fffffbef
+B = 00000082
+C = 00000082
+Result = 000000082
+Flag = 0000
+PASS
+Test Case  131 
+A = fffffbe7
+B = 00000083
+C = fffffbe7
+Result = 0fffffbe7
+Flag = 0001
+PASS
+Test Case  132 
+A = fffffbdf
+B = 00000084
+C = fffffc63
+Result = 0fffffc63
+Flag = 0001
+PASS
+Test Case  133 
+A = fffffbd7
+B = 00000085
+C = fffffb52
+Result = 0fffffb52
+Flag = 0001
+PASS
+Test Case  134 
+A = fffffbcf
+B = 00000086
+C = 00000086
+Result = 000000086
+Flag = 0000
+PASS
+Test Case  135 
+A = fffffbc7
+B = 00000087
+C = fffffbc7
+Result = 0fffffbc7
+Flag = 0001
+PASS
+Test Case  136 
+A = fffffbbf
+B = 00000088
+C = fffffc47
+Result = 0fffffc47
+Flag = 0001
+PASS
+Test Case  137 
+A = fffffbb7
+B = 00000089
+C = fffffb2e
+Result = 0fffffb2e
+Flag = 0001
+PASS
+Test Case  138 
+A = fffffbaf
+B = 0000008a
+C = 0000008a
+Result = 00000008a
+Flag = 0000
+PASS
+Test Case  139 
+A = fffffba7
+B = 0000008b
+C = fffffbaf
+Result = 0fffffbaf
+Flag = 0001
+PASS
+Test Case  140 
+A = fffffb9f
+B = 0000008c
+C = fffffc2b
+Result = 0fffffc2b
+Flag = 0001
+PASS
+Test Case  141 
+A = fffffb97
+B = 0000008d
+C = fffffb0a
+Result = 0fffffb0a
+Flag = 0001
+PASS
+Test Case  142 
+A = fffffb8f
+B = 0000008e
+C = 0000008e
+Result = 00000008e
+Flag = 0000
+PASS
+Test Case  143 
+A = fffffb87
+B = 0000008f
+C = fffffb8f
+Result = 0fffffb8f
+Flag = 0001
+PASS
+Test Case  144 
+A = fffffb7f
+B = 00000090
+C = fffffc0f
+Result = 0fffffc0f
+Flag = 0001
+PASS
+Test Case  145 
+A = fffffb77
+B = 00000091
+C = fffffae6
+Result = 0fffffae6
+Flag = 0001
+PASS
+Test Case  146 
+A = fffffb6f
+B = 00000092
+C = 00000002
+Result = 000000002
+Flag = 0000
+PASS
+Test Case  147 
+A = fffffb67
+B = 00000093
+C = fffffbf7
+Result = 0fffffbf7
+Flag = 0001
+PASS
+Test Case  148 
+A = fffffb5f
+B = 00000094
+C = fffffbf3
+Result = 0fffffbf3
+Flag = 0001
+PASS
+Test Case  149 
+A = fffffb57
+B = 00000095
+C = fffffac2
+Result = 0fffffac2
+Flag = 0001
+PASS
+Test Case  150 
+A = fffffb4f
+B = 00000096
+C = 00000006
+Result = 000000006
+Flag = 0000
+PASS
+Test Case  151 
+A = fffffb47
+B = 00000097
+C = fffffbd7
+Result = 0fffffbd7
+Flag = 0001
+PASS
+Test Case  152 
+A = fffffb3f
+B = 00000098
+C = fffffbd7
+Result = 0fffffbd7
+Flag = 0001
+PASS
+Test Case  153 
+A = fffffb37
+B = 00000099
+C = fffffa9e
+Result = 0fffffa9e
+Flag = 0001
+PASS
+Test Case  154 
+A = fffffb2f
+B = 0000009a
+C = 0000000a
+Result = 00000000a
+Flag = 0000
+PASS
+Test Case  155 
+A = fffffb27
+B = 0000009b
+C = fffffbbf
+Result = 0fffffbbf
+Flag = 0001
+PASS
+Test Case  156 
+A = fffffb1f
+B = 0000009c
+C = fffffbbb
+Result = 0fffffbbb
+Flag = 0001
+PASS
+Test Case  157 
+A = fffffb17
+B = 0000009d
+C = fffffa7a
+Result = 0fffffa7a
+Flag = 0001
+PASS
+Test Case  158 
+A = fffffb0f
+B = 0000009e
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case  159 
+A = fffffb07
+B = 0000009f
+C = fffffb9f
+Result = 0fffffb9f
+Flag = 0001
+PASS
+Test Case  160 
+A = fffffaff
+B = 000000a0
+C = fffffb9f
+Result = 0fffffb9f
+Flag = 0001
+PASS
+Test Case  161 
+A = fffffaf7
+B = 000000a1
+C = fffffa56
+Result = 0fffffa56
+Flag = 0001
+PASS
+Test Case  162 
+A = fffffaef
+B = 000000a2
+C = 000000a2
+Result = 0000000a2
+Flag = 0000
+PASS
+Test Case  163 
+A = fffffae7
+B = 000000a3
+C = fffffae7
+Result = 0fffffae7
+Flag = 0001
+PASS
+Test Case  164 
+A = fffffadf
+B = 000000a4
+C = fffffb83
+Result = 0fffffb83
+Flag = 0001
+PASS
+Test Case  165 
+A = fffffad7
+B = 000000a5
+C = fffffa32
+Result = 0fffffa32
+Flag = 0001
+PASS
+Test Case  166 
+A = fffffacf
+B = 000000a6
+C = 00000086
+Result = 000000086
+Flag = 0000
+PASS
+Test Case  167 
+A = fffffac7
+B = 000000a7
+C = fffffae7
+Result = 0fffffae7
+Flag = 0001
+PASS
+Test Case  168 
+A = fffffabf
+B = 000000a8
+C = fffffb67
+Result = 0fffffb67
+Flag = 0001
+PASS
+Test Case  169 
+A = fffffab7
+B = 000000a9
+C = fffffa0e
+Result = 0fffffa0e
+Flag = 0001
+PASS
+Test Case  170 
+A = fffffaaf
+B = 000000aa
+C = 000000aa
+Result = 0000000aa
+Flag = 0000
+PASS
+Test Case  171 
+A = fffffaa7
+B = 000000ab
+C = fffffaaf
+Result = 0fffffaaf
+Flag = 0001
+PASS
+Test Case  172 
+A = fffffa9f
+B = 000000ac
+C = fffffb4b
+Result = 0fffffb4b
+Flag = 0001
+PASS
+Test Case  173 
+A = fffffa97
+B = 000000ad
+C = fffff9ea
+Result = 0fffff9ea
+Flag = 0001
+PASS
+Test Case  174 
+A = fffffa8f
+B = 000000ae
+C = 0000008e
+Result = 00000008e
+Flag = 0000
+PASS
+Test Case  175 
+A = fffffa87
+B = 000000af
+C = fffffaaf
+Result = 0fffffaaf
+Flag = 0001
+PASS
+Test Case  176 
+A = fffffa7f
+B = 000000b0
+C = fffffb2f
+Result = 0fffffb2f
+Flag = 0001
+PASS
+Test Case  177 
+A = fffffa77
+B = 000000b1
+C = fffff9c6
+Result = 0fffff9c6
+Flag = 0001
+PASS
+Test Case  178 
+A = fffffa6f
+B = 000000b2
+C = 00000022
+Result = 000000022
+Flag = 0000
+PASS
+Test Case  179 
+A = fffffa67
+B = 000000b3
+C = fffffaf7
+Result = 0fffffaf7
+Flag = 0001
+PASS
+Test Case  180 
+A = fffffa5f
+B = 000000b4
+C = fffffb13
+Result = 0fffffb13
+Flag = 0001
+PASS
+Test Case  181 
+A = fffffa57
+B = 000000b5
+C = fffff9a2
+Result = 0fffff9a2
+Flag = 0001
+PASS
+Test Case  182 
+A = fffffa4f
+B = 000000b6
+C = 00000006
+Result = 000000006
+Flag = 0000
+PASS
+Test Case  183 
+A = fffffa47
+B = 000000b7
+C = fffffaf7
+Result = 0fffffaf7
+Flag = 0001
+PASS
+Test Case  184 
+A = fffffa3f
+B = 000000b8
+C = fffffaf7
+Result = 0fffffaf7
+Flag = 0001
+PASS
+Test Case  185 
+A = fffffa37
+B = 000000b9
+C = fffff97e
+Result = 0fffff97e
+Flag = 0001
+PASS
+Test Case  186 
+A = fffffa2f
+B = 000000ba
+C = 0000002a
+Result = 00000002a
+Flag = 0000
+PASS
+Test Case  187 
+A = fffffa27
+B = 000000bb
+C = fffffabf
+Result = 0fffffabf
+Flag = 0001
+PASS
+Test Case  188 
+A = fffffa1f
+B = 000000bc
+C = fffffadb
+Result = 0fffffadb
+Flag = 0001
+PASS
+Test Case  189 
+A = fffffa17
+B = 000000bd
+C = fffff95a
+Result = 0fffff95a
+Flag = 0001
+PASS
+Test Case  190 
+A = fffffa0f
+B = 000000be
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case  191 
+A = fffffa07
+B = 000000bf
+C = fffffabf
+Result = 0fffffabf
+Flag = 0001
+PASS
+Test Case  192 
+A = fffff9ff
+B = 000000c0
+C = fffffabf
+Result = 0fffffabf
+Flag = 0001
+PASS
+Test Case  193 
+A = fffff9f7
+B = 000000c1
+C = fffff936
+Result = 0fffff936
+Flag = 0001
+PASS
+Test Case  194 
+A = fffff9ef
+B = 000000c2
+C = 000000c2
+Result = 0000000c2
+Flag = 0000
+PASS
+Test Case  195 
+A = fffff9e7
+B = 000000c3
+C = fffff9e7
+Result = 0fffff9e7
+Flag = 0001
+PASS
+Test Case  196 
+A = fffff9df
+B = 000000c4
+C = fffffaa3
+Result = 0fffffaa3
+Flag = 0001
+PASS
+Test Case  197 
+A = fffff9d7
+B = 000000c5
+C = fffff912
+Result = 0fffff912
+Flag = 0001
+PASS
+Test Case  198 
+A = fffff9cf
+B = 000000c6
+C = 000000c6
+Result = 0000000c6
+Flag = 0000
+PASS
+Test Case  199 
+A = fffff9c7
+B = 000000c7
+C = fffff9c7
+Result = 0fffff9c7
+Flag = 0001
+PASS
+Test Case  200 
+A = fffff9bf
+B = 000000c8
+C = fffffa87
+Result = 0fffffa87
+Flag = 0001
+PASS
+Test Case  201 
+A = fffff9b7
+B = 000000c9
+C = fffff8ee
+Result = 0fffff8ee
+Flag = 0001
+PASS
+Test Case  202 
+A = fffff9af
+B = 000000ca
+C = 0000008a
+Result = 00000008a
+Flag = 0000
+PASS
+Test Case  203 
+A = fffff9a7
+B = 000000cb
+C = fffff9ef
+Result = 0fffff9ef
+Flag = 0001
+PASS
+Test Case  204 
+A = fffff99f
+B = 000000cc
+C = fffffa6b
+Result = 0fffffa6b
+Flag = 0001
+PASS
+Test Case  205 
+A = fffff997
+B = 000000cd
+C = fffff8ca
+Result = 0fffff8ca
+Flag = 0001
+PASS
+Test Case  206 
+A = fffff98f
+B = 000000ce
+C = 0000008e
+Result = 00000008e
+Flag = 0000
+PASS
+Test Case  207 
+A = fffff987
+B = 000000cf
+C = fffff9cf
+Result = 0fffff9cf
+Flag = 0001
+PASS
+Test Case  208 
+A = fffff97f
+B = 000000d0
+C = fffffa4f
+Result = 0fffffa4f
+Flag = 0001
+PASS
+Test Case  209 
+A = fffff977
+B = 000000d1
+C = fffff8a6
+Result = 0fffff8a6
+Flag = 0001
+PASS
+Test Case  210 
+A = fffff96f
+B = 000000d2
+C = 00000042
+Result = 000000042
+Flag = 0000
+PASS
+Test Case  211 
+A = fffff967
+B = 000000d3
+C = fffff9f7
+Result = 0fffff9f7
+Flag = 0001
+PASS
+Test Case  212 
+A = fffff95f
+B = 000000d4
+C = fffffa33
+Result = 0fffffa33
+Flag = 0001
+PASS
+Test Case  213 
+A = fffff957
+B = 000000d5
+C = fffff882
+Result = 0fffff882
+Flag = 0001
+PASS
+Test Case  214 
+A = fffff94f
+B = 000000d6
+C = 00000046
+Result = 000000046
+Flag = 0000
+PASS
+Test Case  215 
+A = fffff947
+B = 000000d7
+C = fffff9d7
+Result = 0fffff9d7
+Flag = 0001
+PASS
+Test Case  216 
+A = fffff93f
+B = 000000d8
+C = fffffa17
+Result = 0fffffa17
+Flag = 0001
+PASS
+Test Case  217 
+A = fffff937
+B = 000000d9
+C = fffff85e
+Result = 0fffff85e
+Flag = 0001
+PASS
+Test Case  218 
+A = fffff92f
+B = 000000da
+C = 0000000a
+Result = 00000000a
+Flag = 0000
+PASS
+Test Case  219 
+A = fffff927
+B = 000000db
+C = fffff9ff
+Result = 0fffff9ff
+Flag = 0001
+PASS
+Test Case  220 
+A = fffff91f
+B = 000000dc
+C = fffff9fb
+Result = 0fffff9fb
+Flag = 0001
+PASS
+Test Case  221 
+A = fffff917
+B = 000000dd
+C = fffff83a
+Result = 0fffff83a
+Flag = 0001
+PASS
+Test Case  222 
+A = fffff90f
+B = 000000de
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case  223 
+A = fffff907
+B = 000000df
+C = fffff9df
+Result = 0fffff9df
+Flag = 0001
+PASS
+Test Case  224 
+A = fffff8ff
+B = 000000e0
+C = fffff9df
+Result = 0fffff9df
+Flag = 0001
+PASS
+Test Case  225 
+A = fffff8f7
+B = 000000e1
+C = fffff816
+Result = 0fffff816
+Flag = 0001
+PASS
+Test Case  226 
+A = fffff8ef
+B = 000000e2
+C = 000000e2
+Result = 0000000e2
+Flag = 0000
+PASS
+Test Case  227 
+A = fffff8e7
+B = 000000e3
+C = fffff8e7
+Result = 0fffff8e7
+Flag = 0001
+PASS
+Test Case  228 
+A = fffff8df
+B = 000000e4
+C = fffff9c3
+Result = 0fffff9c3
+Flag = 0001
+PASS
+Test Case  229 
+A = fffff8d7
+B = 000000e5
+C = fffff7f2
+Result = 0fffff7f2
+Flag = 0001
+PASS
+Test Case  230 
+A = fffff8cf
+B = 000000e6
+C = 000000c6
+Result = 0000000c6
+Flag = 0000
+PASS
+Test Case  231 
+A = fffff8c7
+B = 000000e7
+C = fffff8e7
+Result = 0fffff8e7
+Flag = 0001
+PASS
+Test Case  232 
+A = fffff8bf
+B = 000000e8
+C = fffff9a7
+Result = 0fffff9a7
+Flag = 0001
+PASS
+Test Case  233 
+A = fffff8b7
+B = 000000e9
+C = fffff7ce
+Result = 0fffff7ce
+Flag = 0001
+PASS
+Test Case  234 
+A = fffff8af
+B = 000000ea
+C = 000000aa
+Result = 0000000aa
+Flag = 0000
+PASS
+Test Case  235 
+A = fffff8a7
+B = 000000eb
+C = fffff8ef
+Result = 0fffff8ef
+Flag = 0001
+PASS
+Test Case  236 
+A = fffff89f
+B = 000000ec
+C = fffff98b
+Result = 0fffff98b
+Flag = 0001
+PASS
+Test Case  237 
+A = fffff897
+B = 000000ed
+C = fffff7aa
+Result = 0fffff7aa
+Flag = 0001
+PASS
+Test Case  238 
+A = fffff88f
+B = 000000ee
+C = 0000008e
+Result = 00000008e
+Flag = 0000
+PASS
+Test Case  239 
+A = fffff887
+B = 000000ef
+C = fffff8ef
+Result = 0fffff8ef
+Flag = 0001
+PASS
+Test Case  240 
+A = fffff87f
+B = 000000f0
+C = fffff96f
+Result = 0fffff96f
+Flag = 0001
+PASS
+Test Case  241 
+A = fffff877
+B = 000000f1
+C = fffff786
+Result = 0fffff786
+Flag = 0001
+PASS
+Test Case  242 
+A = fffff86f
+B = 000000f2
+C = 00000062
+Result = 000000062
+Flag = 0000
+PASS
+Test Case  243 
+A = fffff867
+B = 000000f3
+C = fffff8f7
+Result = 0fffff8f7
+Flag = 0001
+PASS
+Test Case  244 
+A = fffff85f
+B = 000000f4
+C = fffff953
+Result = 0fffff953
+Flag = 0001
+PASS
+Test Case  245 
+A = fffff857
+B = 000000f5
+C = fffff762
+Result = 0fffff762
+Flag = 0001
+PASS
+Test Case  246 
+A = fffff84f
+B = 000000f6
+C = 00000046
+Result = 000000046
+Flag = 0000
+PASS
+Test Case  247 
+A = fffff847
+B = 000000f7
+C = fffff8f7
+Result = 0fffff8f7
+Flag = 0001
+PASS
+Test Case  248 
+A = fffff83f
+B = 000000f8
+C = fffff937
+Result = 0fffff937
+Flag = 0001
+PASS
+Test Case  249 
+A = fffff837
+B = 000000f9
+C = fffff73e
+Result = 0fffff73e
+Flag = 0001
+PASS
+Test Case  250 
+A = fffff82f
+B = 000000fa
+C = 0000002a
+Result = 00000002a
+Flag = 0000
+PASS
+Test Case  251 
+A = fffff827
+B = 000000fb
+C = fffff8ff
+Result = 0fffff8ff
+Flag = 0001
+PASS
+Test Case  252 
+A = fffff81f
+B = 000000fc
+C = fffff91b
+Result = 0fffff91b
+Flag = 0001
+PASS
+Test Case  253 
+A = fffff817
+B = 000000fd
+C = fffff71a
+Result = 0fffff71a
+Flag = 0001
+PASS
+Test Case  254 
+A = fffff80f
+B = 000000fe
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case  255 
+A = fffff807
+B = 000000ff
+C = fffff8ff
+Result = 0fffff8ff
+Flag = 0001
+PASS
+Test Case  256 
+A = fffff7ff
+B = 00000100
+C = fffff8ff
+Result = 0fffff8ff
+Flag = 0001
+PASS
+Test Case  257 
+A = fffff7f7
+B = 00000101
+C = fffff6f6
+Result = 0fffff6f6
+Flag = 0001
+PASS
+Test Case  258 
+A = fffff7ef
+B = 00000102
+C = 00000102
+Result = 000000102
+Flag = 0000
+PASS
+Test Case  259 
+A = fffff7e7
+B = 00000103
+C = fffff7e7
+Result = 0fffff7e7
+Flag = 0001
+PASS
+Test Case  260 
+A = fffff7df
+B = 00000104
+C = fffff8e3
+Result = 0fffff8e3
+Flag = 0001
+PASS
+Test Case  261 
+A = fffff7d7
+B = 00000105
+C = fffff6d2
+Result = 0fffff6d2
+Flag = 0001
+PASS
+Test Case  262 
+A = fffff7cf
+B = 00000106
+C = 00000106
+Result = 000000106
+Flag = 0000
+PASS
+Test Case  263 
+A = fffff7c7
+B = 00000107
+C = fffff7c7
+Result = 0fffff7c7
+Flag = 0001
+PASS
+Test Case  264 
+A = fffff7bf
+B = 00000108
+C = fffff8c7
+Result = 0fffff8c7
+Flag = 0001
+PASS
+Test Case  265 
+A = fffff7b7
+B = 00000109
+C = fffff6ae
+Result = 0fffff6ae
+Flag = 0001
+PASS
+Test Case  266 
+A = fffff7af
+B = 0000010a
+C = 0000010a
+Result = 00000010a
+Flag = 0000
+PASS
+Test Case  267 
+A = fffff7a7
+B = 0000010b
+C = fffff7af
+Result = 0fffff7af
+Flag = 0001
+PASS
+Test Case  268 
+A = fffff79f
+B = 0000010c
+C = fffff8ab
+Result = 0fffff8ab
+Flag = 0001
+PASS
+Test Case  269 
+A = fffff797
+B = 0000010d
+C = fffff68a
+Result = 0fffff68a
+Flag = 0001
+PASS
+Test Case  270 
+A = fffff78f
+B = 0000010e
+C = 0000010e
+Result = 00000010e
+Flag = 0000
+PASS
+Test Case  271 
+A = fffff787
+B = 0000010f
+C = fffff78f
+Result = 0fffff78f
+Flag = 0001
+PASS
+Test Case  272 
+A = fffff77f
+B = 00000110
+C = fffff88f
+Result = 0fffff88f
+Flag = 0001
+PASS
+Test Case  273 
+A = fffff777
+B = 00000111
+C = fffff666
+Result = 0fffff666
+Flag = 0001
+PASS
+Test Case  274 
+A = fffff76f
+B = 00000112
+C = 00000102
+Result = 000000102
+Flag = 0000
+PASS
+Test Case  275 
+A = fffff767
+B = 00000113
+C = fffff777
+Result = 0fffff777
+Flag = 0001
+PASS
+Test Case  276 
+A = fffff75f
+B = 00000114
+C = fffff873
+Result = 0fffff873
+Flag = 0001
+PASS
+Test Case  277 
+A = fffff757
+B = 00000115
+C = fffff642
+Result = 0fffff642
+Flag = 0001
+PASS
+Test Case  278 
+A = fffff74f
+B = 00000116
+C = 00000106
+Result = 000000106
+Flag = 0000
+PASS
+Test Case  279 
+A = fffff747
+B = 00000117
+C = fffff757
+Result = 0fffff757
+Flag = 0001
+PASS
+Test Case  280 
+A = fffff73f
+B = 00000118
+C = fffff857
+Result = 0fffff857
+Flag = 0001
+PASS
+Test Case  281 
+A = fffff737
+B = 00000119
+C = fffff61e
+Result = 0fffff61e
+Flag = 0001
+PASS
+Test Case  282 
+A = fffff72f
+B = 0000011a
+C = 0000010a
+Result = 00000010a
+Flag = 0000
+PASS
+Test Case  283 
+A = fffff727
+B = 0000011b
+C = fffff73f
+Result = 0fffff73f
+Flag = 0001
+PASS
+Test Case  284 
+A = fffff71f
+B = 0000011c
+C = fffff83b
+Result = 0fffff83b
+Flag = 0001
+PASS
+Test Case  285 
+A = fffff717
+B = 0000011d
+C = fffff5fa
+Result = 0fffff5fa
+Flag = 0001
+PASS
+Test Case  286 
+A = fffff70f
+B = 0000011e
+C = 0000010e
+Result = 00000010e
+Flag = 0000
+PASS
+Test Case  287 
+A = fffff707
+B = 0000011f
+C = fffff71f
+Result = 0fffff71f
+Flag = 0001
+PASS
+Test Case  288 
+A = fffff6ff
+B = 00000120
+C = fffff81f
+Result = 0fffff81f
+Flag = 0001
+PASS
+Test Case  289 
+A = fffff6f7
+B = 00000121
+C = fffff5d6
+Result = 0fffff5d6
+Flag = 0001
+PASS
+Test Case  290 
+A = fffff6ef
+B = 00000122
+C = 00000022
+Result = 000000022
+Flag = 0000
+PASS
+Test Case  291 
+A = fffff6e7
+B = 00000123
+C = fffff7e7
+Result = 0fffff7e7
+Flag = 0001
+PASS
+Test Case  292 
+A = fffff6df
+B = 00000124
+C = fffff803
+Result = 0fffff803
+Flag = 0001
+PASS
+Test Case  293 
+A = fffff6d7
+B = 00000125
+C = fffff5b2
+Result = 0fffff5b2
+Flag = 0001
+PASS
+Test Case  294 
+A = fffff6cf
+B = 00000126
+C = 00000006
+Result = 000000006
+Flag = 0000
+PASS
+Test Case  295 
+A = fffff6c7
+B = 00000127
+C = fffff7e7
+Result = 0fffff7e7
+Flag = 0001
+PASS
+Test Case  296 
+A = fffff6bf
+B = 00000128
+C = fffff7e7
+Result = 0fffff7e7
+Flag = 0001
+PASS
+Test Case  297 
+A = fffff6b7
+B = 00000129
+C = fffff58e
+Result = 0fffff58e
+Flag = 0001
+PASS
+Test Case  298 
+A = fffff6af
+B = 0000012a
+C = 0000002a
+Result = 00000002a
+Flag = 0000
+PASS
+Test Case  299 
+A = fffff6a7
+B = 0000012b
+C = fffff7af
+Result = 0fffff7af
+Flag = 0001
+PASS
+Test Case  300 
+A = fffff69f
+B = 0000012c
+C = fffff7cb
+Result = 0fffff7cb
+Flag = 0001
+PASS
+Test Case  301 
+A = fffff697
+B = 0000012d
+C = fffff56a
+Result = 0fffff56a
+Flag = 0001
+PASS
+Test Case  302 
+A = fffff68f
+B = 0000012e
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case  303 
+A = fffff687
+B = 0000012f
+C = fffff7af
+Result = 0fffff7af
+Flag = 0001
+PASS
+Test Case  304 
+A = fffff67f
+B = 00000130
+C = fffff7af
+Result = 0fffff7af
+Flag = 0001
+PASS
+Test Case  305 
+A = fffff677
+B = 00000131
+C = fffff546
+Result = 0fffff546
+Flag = 0001
+PASS
+Test Case  306 
+A = fffff66f
+B = 00000132
+C = 00000022
+Result = 000000022
+Flag = 0000
+PASS
+Test Case  307 
+A = fffff667
+B = 00000133
+C = fffff777
+Result = 0fffff777
+Flag = 0001
+PASS
+Test Case  308 
+A = fffff65f
+B = 00000134
+C = fffff793
+Result = 0fffff793
+Flag = 0001
+PASS
+Test Case  309 
+A = fffff657
+B = 00000135
+C = fffff522
+Result = 0fffff522
+Flag = 0001
+PASS
+Test Case  310 
+A = fffff64f
+B = 00000136
+C = 00000006
+Result = 000000006
+Flag = 0000
+PASS
+Test Case  311 
+A = fffff647
+B = 00000137
+C = fffff777
+Result = 0fffff777
+Flag = 0001
+PASS
+Test Case  312 
+A = fffff63f
+B = 00000138
+C = fffff777
+Result = 0fffff777
+Flag = 0001
+PASS
+Test Case  313 
+A = fffff637
+B = 00000139
+C = fffff4fe
+Result = 0fffff4fe
+Flag = 0001
+PASS
+Test Case  314 
+A = fffff62f
+B = 0000013a
+C = 0000002a
+Result = 00000002a
+Flag = 0000
+PASS
+Test Case  315 
+A = fffff627
+B = 0000013b
+C = fffff73f
+Result = 0fffff73f
+Flag = 0001
+PASS
+Test Case  316 
+A = fffff61f
+B = 0000013c
+C = fffff75b
+Result = 0fffff75b
+Flag = 0001
+PASS
+Test Case  317 
+A = fffff617
+B = 0000013d
+C = fffff4da
+Result = 0fffff4da
+Flag = 0001
+PASS
+Test Case  318 
+A = fffff60f
+B = 0000013e
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case  319 
+A = fffff607
+B = 0000013f
+C = fffff73f
+Result = 0fffff73f
+Flag = 0001
+PASS
+Test Case  320 
+A = fffff5ff
+B = 00000140
+C = fffff73f
+Result = 0fffff73f
+Flag = 0001
+PASS
+Test Case  321 
+A = fffff5f7
+B = 00000141
+C = fffff4b6
+Result = 0fffff4b6
+Flag = 0001
+PASS
+Test Case  322 
+A = fffff5ef
+B = 00000142
+C = 00000142
+Result = 000000142
+Flag = 0000
+PASS
+Test Case  323 
+A = fffff5e7
+B = 00000143
+C = fffff5e7
+Result = 0fffff5e7
+Flag = 0001
+PASS
+Test Case  324 
+A = fffff5df
+B = 00000144
+C = fffff723
+Result = 0fffff723
+Flag = 0001
+PASS
+Test Case  325 
+A = fffff5d7
+B = 00000145
+C = fffff492
+Result = 0fffff492
+Flag = 0001
+PASS
+Test Case  326 
+A = fffff5cf
+B = 00000146
+C = 00000146
+Result = 000000146
+Flag = 0000
+PASS
+Test Case  327 
+A = fffff5c7
+B = 00000147
+C = fffff5c7
+Result = 0fffff5c7
+Flag = 0001
+PASS
+Test Case  328 
+A = fffff5bf
+B = 00000148
+C = fffff707
+Result = 0fffff707
+Flag = 0001
+PASS
+Test Case  329 
+A = fffff5b7
+B = 00000149
+C = fffff46e
+Result = 0fffff46e
+Flag = 0001
+PASS
+Test Case  330 
+A = fffff5af
+B = 0000014a
+C = 0000010a
+Result = 00000010a
+Flag = 0000
+PASS
+Test Case  331 
+A = fffff5a7
+B = 0000014b
+C = fffff5ef
+Result = 0fffff5ef
+Flag = 0001
+PASS
+Test Case  332 
+A = fffff59f
+B = 0000014c
+C = fffff6eb
+Result = 0fffff6eb
+Flag = 0001
+PASS
+Test Case  333 
+A = fffff597
+B = 0000014d
+C = fffff44a
+Result = 0fffff44a
+Flag = 0001
+PASS
+Test Case  334 
+A = fffff58f
+B = 0000014e
+C = 0000010e
+Result = 00000010e
+Flag = 0000
+PASS
+Test Case  335 
+A = fffff587
+B = 0000014f
+C = fffff5cf
+Result = 0fffff5cf
+Flag = 0001
+PASS
+Test Case  336 
+A = fffff57f
+B = 00000150
+C = fffff6cf
+Result = 0fffff6cf
+Flag = 0001
+PASS
+Test Case  337 
+A = fffff577
+B = 00000151
+C = fffff426
+Result = 0fffff426
+Flag = 0001
+PASS
+Test Case  338 
+A = fffff56f
+B = 00000152
+C = 00000142
+Result = 000000142
+Flag = 0000
+PASS
+Test Case  339 
+A = fffff567
+B = 00000153
+C = fffff577
+Result = 0fffff577
+Flag = 0001
+PASS
+Test Case  340 
+A = fffff55f
+B = 00000154
+C = fffff6b3
+Result = 0fffff6b3
+Flag = 0001
+PASS
+Test Case  341 
+A = fffff557
+B = 00000155
+C = fffff402
+Result = 0fffff402
+Flag = 0001
+PASS
+Test Case  342 
+A = fffff54f
+B = 00000156
+C = 00000146
+Result = 000000146
+Flag = 0000
+PASS
+Test Case  343 
+A = fffff547
+B = 00000157
+C = fffff557
+Result = 0fffff557
+Flag = 0001
+PASS
+Test Case  344 
+A = fffff53f
+B = 00000158
+C = fffff697
+Result = 0fffff697
+Flag = 0001
+PASS
+Test Case  345 
+A = fffff537
+B = 00000159
+C = fffff3de
+Result = 0fffff3de
+Flag = 0001
+PASS
+Test Case  346 
+A = fffff52f
+B = 0000015a
+C = 0000010a
+Result = 00000010a
+Flag = 0000
+PASS
+Test Case  347 
+A = fffff527
+B = 0000015b
+C = fffff57f
+Result = 0fffff57f
+Flag = 0001
+PASS
+Test Case  348 
+A = fffff51f
+B = 0000015c
+C = fffff67b
+Result = 0fffff67b
+Flag = 0001
+PASS
+Test Case  349 
+A = fffff517
+B = 0000015d
+C = fffff3ba
+Result = 0fffff3ba
+Flag = 0001
+PASS
+Test Case  350 
+A = fffff50f
+B = 0000015e
+C = 0000010e
+Result = 00000010e
+Flag = 0000
+PASS
+Test Case  351 
+A = fffff507
+B = 0000015f
+C = fffff55f
+Result = 0fffff55f
+Flag = 0001
+PASS
+Test Case  352 
+A = fffff4ff
+B = 00000160
+C = fffff65f
+Result = 0fffff65f
+Flag = 0001
+PASS
+Test Case  353 
+A = fffff4f7
+B = 00000161
+C = fffff396
+Result = 0fffff396
+Flag = 0001
+PASS
+Test Case  354 
+A = fffff4ef
+B = 00000162
+C = 00000062
+Result = 000000062
+Flag = 0000
+PASS
+Test Case  355 
+A = fffff4e7
+B = 00000163
+C = fffff5e7
+Result = 0fffff5e7
+Flag = 0001
+PASS
+Test Case  356 
+A = fffff4df
+B = 00000164
+C = fffff643
+Result = 0fffff643
+Flag = 0001
+PASS
+Test Case  357 
+A = fffff4d7
+B = 00000165
+C = fffff372
+Result = 0fffff372
+Flag = 0001
+PASS
+Test Case  358 
+A = fffff4cf
+B = 00000166
+C = 00000046
+Result = 000000046
+Flag = 0000
+PASS
+Test Case  359 
+A = fffff4c7
+B = 00000167
+C = fffff5e7
+Result = 0fffff5e7
+Flag = 0001
+PASS
+Test Case  360 
+A = fffff4bf
+B = 00000168
+C = fffff627
+Result = 0fffff627
+Flag = 0001
+PASS
+Test Case  361 
+A = fffff4b7
+B = 00000169
+C = fffff34e
+Result = 0fffff34e
+Flag = 0001
+PASS
+Test Case  362 
+A = fffff4af
+B = 0000016a
+C = 0000002a
+Result = 00000002a
+Flag = 0000
+PASS
+Test Case  363 
+A = fffff4a7
+B = 0000016b
+C = fffff5ef
+Result = 0fffff5ef
+Flag = 0001
+PASS
+Test Case  364 
+A = fffff49f
+B = 0000016c
+C = fffff60b
+Result = 0fffff60b
+Flag = 0001
+PASS
+Test Case  365 
+A = fffff497
+B = 0000016d
+C = fffff32a
+Result = 0fffff32a
+Flag = 0001
+PASS
+Test Case  366 
+A = fffff48f
+B = 0000016e
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case  367 
+A = fffff487
+B = 0000016f
+C = fffff5ef
+Result = 0fffff5ef
+Flag = 0001
+PASS
+Test Case  368 
+A = fffff47f
+B = 00000170
+C = fffff5ef
+Result = 0fffff5ef
+Flag = 0001
+PASS
+Test Case  369 
+A = fffff477
+B = 00000171
+C = fffff306
+Result = 0fffff306
+Flag = 0001
+PASS
+Test Case  370 
+A = fffff46f
+B = 00000172
+C = 00000062
+Result = 000000062
+Flag = 0000
+PASS
+Test Case  371 
+A = fffff467
+B = 00000173
+C = fffff577
+Result = 0fffff577
+Flag = 0001
+PASS
+Test Case  372 
+A = fffff45f
+B = 00000174
+C = fffff5d3
+Result = 0fffff5d3
+Flag = 0001
+PASS
+Test Case  373 
+A = fffff457
+B = 00000175
+C = fffff2e2
+Result = 0fffff2e2
+Flag = 0001
+PASS
+Test Case  374 
+A = fffff44f
+B = 00000176
+C = 00000046
+Result = 000000046
+Flag = 0000
+PASS
+Test Case  375 
+A = fffff447
+B = 00000177
+C = fffff577
+Result = 0fffff577
+Flag = 0001
+PASS
+Test Case  376 
+A = fffff43f
+B = 00000178
+C = fffff5b7
+Result = 0fffff5b7
+Flag = 0001
+PASS
+Test Case  377 
+A = fffff437
+B = 00000179
+C = fffff2be
+Result = 0fffff2be
+Flag = 0001
+PASS
+Test Case  378 
+A = fffff42f
+B = 0000017a
+C = 0000002a
+Result = 00000002a
+Flag = 0000
+PASS
+Test Case  379 
+A = fffff427
+B = 0000017b
+C = fffff57f
+Result = 0fffff57f
+Flag = 0001
+PASS
+Test Case  380 
+A = fffff41f
+B = 0000017c
+C = fffff59b
+Result = 0fffff59b
+Flag = 0001
+PASS
+Test Case  381 
+A = fffff417
+B = 0000017d
+C = fffff29a
+Result = 0fffff29a
+Flag = 0001
+PASS
+Test Case  382 
+A = fffff40f
+B = 0000017e
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case  383 
+A = fffff407
+B = 0000017f
+C = fffff57f
+Result = 0fffff57f
+Flag = 0001
+PASS
+Test Case  384 
+A = fffff3ff
+B = 00000180
+C = fffff57f
+Result = 0fffff57f
+Flag = 0001
+PASS
+Test Case  385 
+A = fffff3f7
+B = 00000181
+C = fffff276
+Result = 0fffff276
+Flag = 0001
+PASS
+Test Case  386 
+A = fffff3ef
+B = 00000182
+C = 00000182
+Result = 000000182
+Flag = 0000
+PASS
+Test Case  387 
+A = fffff3e7
+B = 00000183
+C = fffff3e7
+Result = 0fffff3e7
+Flag = 0001
+PASS
+Test Case  388 
+A = fffff3df
+B = 00000184
+C = fffff563
+Result = 0fffff563
+Flag = 0001
+PASS
+Test Case  389 
+A = fffff3d7
+B = 00000185
+C = fffff252
+Result = 0fffff252
+Flag = 0001
+PASS
+Test Case  390 
+A = fffff3cf
+B = 00000186
+C = 00000186
+Result = 000000186
+Flag = 0000
+PASS
+Test Case  391 
+A = fffff3c7
+B = 00000187
+C = fffff3c7
+Result = 0fffff3c7
+Flag = 0001
+PASS
+Test Case  392 
+A = fffff3bf
+B = 00000188
+C = fffff547
+Result = 0fffff547
+Flag = 0001
+PASS
+Test Case  393 
+A = fffff3b7
+B = 00000189
+C = fffff22e
+Result = 0fffff22e
+Flag = 0001
+PASS
+Test Case  394 
+A = fffff3af
+B = 0000018a
+C = 0000018a
+Result = 00000018a
+Flag = 0000
+PASS
+Test Case  395 
+A = fffff3a7
+B = 0000018b
+C = fffff3af
+Result = 0fffff3af
+Flag = 0001
+PASS
+Test Case  396 
+A = fffff39f
+B = 0000018c
+C = fffff52b
+Result = 0fffff52b
+Flag = 0001
+PASS
+Test Case  397 
+A = fffff397
+B = 0000018d
+C = fffff20a
+Result = 0fffff20a
+Flag = 0001
+PASS
+Test Case  398 
+A = fffff38f
+B = 0000018e
+C = 0000018e
+Result = 00000018e
+Flag = 0000
+PASS
+Test Case  399 
+A = fffff387
+B = 0000018f
+C = fffff38f
+Result = 0fffff38f
+Flag = 0001
+PASS
+Test Case  400 
+A = fffff37f
+B = 00000190
+C = fffff50f
+Result = 0fffff50f
+Flag = 0001
+PASS
+Test Case  401 
+A = fffff377
+B = 00000191
+C = fffff1e6
+Result = 0fffff1e6
+Flag = 0001
+PASS
+Test Case  402 
+A = fffff36f
+B = 00000192
+C = 00000102
+Result = 000000102
+Flag = 0000
+PASS
+Test Case  403 
+A = fffff367
+B = 00000193
+C = fffff3f7
+Result = 0fffff3f7
+Flag = 0001
+PASS
+Test Case  404 
+A = fffff35f
+B = 00000194
+C = fffff4f3
+Result = 0fffff4f3
+Flag = 0001
+PASS
+Test Case  405 
+A = fffff357
+B = 00000195
+C = fffff1c2
+Result = 0fffff1c2
+Flag = 0001
+PASS
+Test Case  406 
+A = fffff34f
+B = 00000196
+C = 00000106
+Result = 000000106
+Flag = 0000
+PASS
+Test Case  407 
+A = fffff347
+B = 00000197
+C = fffff3d7
+Result = 0fffff3d7
+Flag = 0001
+PASS
+Test Case  408 
+A = fffff33f
+B = 00000198
+C = fffff4d7
+Result = 0fffff4d7
+Flag = 0001
+PASS
+Test Case  409 
+A = fffff337
+B = 00000199
+C = fffff19e
+Result = 0fffff19e
+Flag = 0001
+PASS
+Test Case  410 
+A = fffff32f
+B = 0000019a
+C = 0000010a
+Result = 00000010a
+Flag = 0000
+PASS
+Test Case  411 
+A = fffff327
+B = 0000019b
+C = fffff3bf
+Result = 0fffff3bf
+Flag = 0001
+PASS
+Test Case  412 
+A = fffff31f
+B = 0000019c
+C = fffff4bb
+Result = 0fffff4bb
+Flag = 0001
+PASS
+Test Case  413 
+A = fffff317
+B = 0000019d
+C = fffff17a
+Result = 0fffff17a
+Flag = 0001
+PASS
+Test Case  414 
+A = fffff30f
+B = 0000019e
+C = 0000010e
+Result = 00000010e
+Flag = 0000
+PASS
+Test Case  415 
+A = fffff307
+B = 0000019f
+C = fffff39f
+Result = 0fffff39f
+Flag = 0001
+PASS
+Test Case  416 
+A = fffff2ff
+B = 000001a0
+C = fffff49f
+Result = 0fffff49f
+Flag = 0001
+PASS
+Test Case  417 
+A = fffff2f7
+B = 000001a1
+C = fffff156
+Result = 0fffff156
+Flag = 0001
+PASS
+Test Case  418 
+A = fffff2ef
+B = 000001a2
+C = 000000a2
+Result = 0000000a2
+Flag = 0000
+PASS
+Test Case  419 
+A = fffff2e7
+B = 000001a3
+C = fffff3e7
+Result = 0fffff3e7
+Flag = 0001
+PASS
+Test Case  420 
+A = fffff2df
+B = 000001a4
+C = fffff483
+Result = 0fffff483
+Flag = 0001
+PASS
+Test Case  421 
+A = fffff2d7
+B = 000001a5
+C = fffff132
+Result = 0fffff132
+Flag = 0001
+PASS
+Test Case  422 
+A = fffff2cf
+B = 000001a6
+C = 00000086
+Result = 000000086
+Flag = 0000
+PASS
+Test Case  423 
+A = fffff2c7
+B = 000001a7
+C = fffff3e7
+Result = 0fffff3e7
+Flag = 0001
+PASS
+Test Case  424 
+A = fffff2bf
+B = 000001a8
+C = fffff467
+Result = 0fffff467
+Flag = 0001
+PASS
+Test Case  425 
+A = fffff2b7
+B = 000001a9
+C = fffff10e
+Result = 0fffff10e
+Flag = 0001
+PASS
+Test Case  426 
+A = fffff2af
+B = 000001aa
+C = 000000aa
+Result = 0000000aa
+Flag = 0000
+PASS
+Test Case  427 
+A = fffff2a7
+B = 000001ab
+C = fffff3af
+Result = 0fffff3af
+Flag = 0001
+PASS
+Test Case  428 
+A = fffff29f
+B = 000001ac
+C = fffff44b
+Result = 0fffff44b
+Flag = 0001
+PASS
+Test Case  429 
+A = fffff297
+B = 000001ad
+C = fffff0ea
+Result = 0fffff0ea
+Flag = 0001
+PASS
+Test Case  430 
+A = fffff28f
+B = 000001ae
+C = 0000008e
+Result = 00000008e
+Flag = 0000
+PASS
+Test Case  431 
+A = fffff287
+B = 000001af
+C = fffff3af
+Result = 0fffff3af
+Flag = 0001
+PASS
+Test Case  432 
+A = fffff27f
+B = 000001b0
+C = fffff42f
+Result = 0fffff42f
+Flag = 0001
+PASS
+Test Case  433 
+A = fffff277
+B = 000001b1
+C = fffff0c6
+Result = 0fffff0c6
+Flag = 0001
+PASS
+Test Case  434 
+A = fffff26f
+B = 000001b2
+C = 00000022
+Result = 000000022
+Flag = 0000
+PASS
+Test Case  435 
+A = fffff267
+B = 000001b3
+C = fffff3f7
+Result = 0fffff3f7
+Flag = 0001
+PASS
+Test Case  436 
+A = fffff25f
+B = 000001b4
+C = fffff413
+Result = 0fffff413
+Flag = 0001
+PASS
+Test Case  437 
+A = fffff257
+B = 000001b5
+C = fffff0a2
+Result = 0fffff0a2
+Flag = 0001
+PASS
+Test Case  438 
+A = fffff24f
+B = 000001b6
+C = 00000006
+Result = 000000006
+Flag = 0000
+PASS
+Test Case  439 
+A = fffff247
+B = 000001b7
+C = fffff3f7
+Result = 0fffff3f7
+Flag = 0001
+PASS
+Test Case  440 
+A = fffff23f
+B = 000001b8
+C = fffff3f7
+Result = 0fffff3f7
+Flag = 0001
+PASS
+Test Case  441 
+A = fffff237
+B = 000001b9
+C = fffff07e
+Result = 0fffff07e
+Flag = 0001
+PASS
+Test Case  442 
+A = fffff22f
+B = 000001ba
+C = 0000002a
+Result = 00000002a
+Flag = 0000
+PASS
+Test Case  443 
+A = fffff227
+B = 000001bb
+C = fffff3bf
+Result = 0fffff3bf
+Flag = 0001
+PASS
+Test Case  444 
+A = fffff21f
+B = 000001bc
+C = fffff3db
+Result = 0fffff3db
+Flag = 0001
+PASS
+Test Case  445 
+A = fffff217
+B = 000001bd
+C = fffff05a
+Result = 0fffff05a
+Flag = 0001
+PASS
+Test Case  446 
+A = fffff20f
+B = 000001be
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case  447 
+A = fffff207
+B = 000001bf
+C = fffff3bf
+Result = 0fffff3bf
+Flag = 0001
+PASS
+Test Case  448 
+A = fffff1ff
+B = 000001c0
+C = fffff3bf
+Result = 0fffff3bf
+Flag = 0001
+PASS
+Test Case  449 
+A = fffff1f7
+B = 000001c1
+C = fffff036
+Result = 0fffff036
+Flag = 0001
+PASS
+Test Case  450 
+A = fffff1ef
+B = 000001c2
+C = 000001c2
+Result = 0000001c2
+Flag = 0000
+PASS
+Test Case  451 
+A = fffff1e7
+B = 000001c3
+C = fffff1e7
+Result = 0fffff1e7
+Flag = 0001
+PASS
+Test Case  452 
+A = fffff1df
+B = 000001c4
+C = fffff3a3
+Result = 0fffff3a3
+Flag = 0001
+PASS
+Test Case  453 
+A = fffff1d7
+B = 000001c5
+C = fffff012
+Result = 0fffff012
+Flag = 0001
+PASS
+Test Case  454 
+A = fffff1cf
+B = 000001c6
+C = 000001c6
+Result = 0000001c6
+Flag = 0000
+PASS
+Test Case  455 
+A = fffff1c7
+B = 000001c7
+C = fffff1c7
+Result = 0fffff1c7
+Flag = 0001
+PASS
+Test Case  456 
+A = fffff1bf
+B = 000001c8
+C = fffff387
+Result = 0fffff387
+Flag = 0001
+PASS
+Test Case  457 
+A = fffff1b7
+B = 000001c9
+C = ffffefee
+Result = 0ffffefee
+Flag = 0001
+PASS
+Test Case  458 
+A = fffff1af
+B = 000001ca
+C = 0000018a
+Result = 00000018a
+Flag = 0000
+PASS
+Test Case  459 
+A = fffff1a7
+B = 000001cb
+C = fffff1ef
+Result = 0fffff1ef
+Flag = 0001
+PASS
+Test Case  460 
+A = fffff19f
+B = 000001cc
+C = fffff36b
+Result = 0fffff36b
+Flag = 0001
+PASS
+Test Case  461 
+A = fffff197
+B = 000001cd
+C = ffffefca
+Result = 0ffffefca
+Flag = 0001
+PASS
+Test Case  462 
+A = fffff18f
+B = 000001ce
+C = 0000018e
+Result = 00000018e
+Flag = 0000
+PASS
+Test Case  463 
+A = fffff187
+B = 000001cf
+C = fffff1cf
+Result = 0fffff1cf
+Flag = 0001
+PASS
+Test Case  464 
+A = fffff17f
+B = 000001d0
+C = fffff34f
+Result = 0fffff34f
+Flag = 0001
+PASS
+Test Case  465 
+A = fffff177
+B = 000001d1
+C = ffffefa6
+Result = 0ffffefa6
+Flag = 0001
+PASS
+Test Case  466 
+A = fffff16f
+B = 000001d2
+C = 00000142
+Result = 000000142
+Flag = 0000
+PASS
+Test Case  467 
+A = fffff167
+B = 000001d3
+C = fffff1f7
+Result = 0fffff1f7
+Flag = 0001
+PASS
+Test Case  468 
+A = fffff15f
+B = 000001d4
+C = fffff333
+Result = 0fffff333
+Flag = 0001
+PASS
+Test Case  469 
+A = fffff157
+B = 000001d5
+C = ffffef82
+Result = 0ffffef82
+Flag = 0001
+PASS
+Test Case  470 
+A = fffff14f
+B = 000001d6
+C = 00000146
+Result = 000000146
+Flag = 0000
+PASS
+Test Case  471 
+A = fffff147
+B = 000001d7
+C = fffff1d7
+Result = 0fffff1d7
+Flag = 0001
+PASS
+Test Case  472 
+A = fffff13f
+B = 000001d8
+C = fffff317
+Result = 0fffff317
+Flag = 0001
+PASS
+Test Case  473 
+A = fffff137
+B = 000001d9
+C = ffffef5e
+Result = 0ffffef5e
+Flag = 0001
+PASS
+Test Case  474 
+A = fffff12f
+B = 000001da
+C = 0000010a
+Result = 00000010a
+Flag = 0000
+PASS
+Test Case  475 
+A = fffff127
+B = 000001db
+C = fffff1ff
+Result = 0fffff1ff
+Flag = 0001
+PASS
+Test Case  476 
+A = fffff11f
+B = 000001dc
+C = fffff2fb
+Result = 0fffff2fb
+Flag = 0001
+PASS
+Test Case  477 
+A = fffff117
+B = 000001dd
+C = ffffef3a
+Result = 0ffffef3a
+Flag = 0001
+PASS
+Test Case  478 
+A = fffff10f
+B = 000001de
+C = 0000010e
+Result = 00000010e
+Flag = 0000
+PASS
+Test Case  479 
+A = fffff107
+B = 000001df
+C = fffff1df
+Result = 0fffff1df
+Flag = 0001
+PASS
+Test Case  480 
+A = fffff0ff
+B = 000001e0
+C = fffff2df
+Result = 0fffff2df
+Flag = 0001
+PASS
+Test Case  481 
+A = fffff0f7
+B = 000001e1
+C = ffffef16
+Result = 0ffffef16
+Flag = 0001
+PASS
+Test Case  482 
+A = fffff0ef
+B = 000001e2
+C = 000000e2
+Result = 0000000e2
+Flag = 0000
+PASS
+Test Case  483 
+A = fffff0e7
+B = 000001e3
+C = fffff1e7
+Result = 0fffff1e7
+Flag = 0001
+PASS
+Test Case  484 
+A = fffff0df
+B = 000001e4
+C = fffff2c3
+Result = 0fffff2c3
+Flag = 0001
+PASS
+Test Case  485 
+A = fffff0d7
+B = 000001e5
+C = ffffeef2
+Result = 0ffffeef2
+Flag = 0001
+PASS
+Test Case  486 
+A = fffff0cf
+B = 000001e6
+C = 000000c6
+Result = 0000000c6
+Flag = 0000
+PASS
+Test Case  487 
+A = fffff0c7
+B = 000001e7
+C = fffff1e7
+Result = 0fffff1e7
+Flag = 0001
+PASS
+Test Case  488 
+A = fffff0bf
+B = 000001e8
+C = fffff2a7
+Result = 0fffff2a7
+Flag = 0001
+PASS
+Test Case  489 
+A = fffff0b7
+B = 000001e9
+C = ffffeece
+Result = 0ffffeece
+Flag = 0001
+PASS
+Test Case  490 
+A = fffff0af
+B = 000001ea
+C = 000000aa
+Result = 0000000aa
+Flag = 0000
+PASS
+Test Case  491 
+A = fffff0a7
+B = 000001eb
+C = fffff1ef
+Result = 0fffff1ef
+Flag = 0001
+PASS
+Test Case  492 
+A = fffff09f
+B = 000001ec
+C = fffff28b
+Result = 0fffff28b
+Flag = 0001
+PASS
+Test Case  493 
+A = fffff097
+B = 000001ed
+C = ffffeeaa
+Result = 0ffffeeaa
+Flag = 0001
+PASS
+Test Case  494 
+A = fffff08f
+B = 000001ee
+C = 0000008e
+Result = 00000008e
+Flag = 0000
+PASS
+Test Case  495 
+A = fffff087
+B = 000001ef
+C = fffff1ef
+Result = 0fffff1ef
+Flag = 0001
+PASS
+Test Case  496 
+A = fffff07f
+B = 000001f0
+C = fffff26f
+Result = 0fffff26f
+Flag = 0001
+PASS
+Test Case  497 
+A = fffff077
+B = 000001f1
+C = ffffee86
+Result = 0ffffee86
+Flag = 0001
+PASS
+Test Case  498 
+A = fffff06f
+B = 000001f2
+C = 00000062
+Result = 000000062
+Flag = 0000
+PASS
+Test Case  499 
+A = fffff067
+B = 000001f3
+C = fffff1f7
+Result = 0fffff1f7
+Flag = 0001
+PASS
+Test Case  500 
+A = fffff05f
+B = 000001f4
+C = fffff253
+Result = 0fffff253
+Flag = 0001
+PASS
+Test Case  501 
+A = fffff057
+B = 000001f5
+C = ffffee62
+Result = 0ffffee62
+Flag = 0001
+PASS
+Test Case  502 
+A = fffff04f
+B = 000001f6
+C = 00000046
+Result = 000000046
+Flag = 0000
+PASS
+Test Case  503 
+A = fffff047
+B = 000001f7
+C = fffff1f7
+Result = 0fffff1f7
+Flag = 0001
+PASS
+Test Case  504 
+A = fffff03f
+B = 000001f8
+C = fffff237
+Result = 0fffff237
+Flag = 0001
+PASS
+Test Case  505 
+A = fffff037
+B = 000001f9
+C = ffffee3e
+Result = 0ffffee3e
+Flag = 0001
+PASS
+Test Case  506 
+A = fffff02f
+B = 000001fa
+C = 0000002a
+Result = 00000002a
+Flag = 0000
+PASS
+Test Case  507 
+A = fffff027
+B = 000001fb
+C = fffff1ff
+Result = 0fffff1ff
+Flag = 0001
+PASS
+Test Case  508 
+A = fffff01f
+B = 000001fc
+C = fffff21b
+Result = 0fffff21b
+Flag = 0001
+PASS
+Test Case  509 
+A = fffff017
+B = 000001fd
+C = ffffee1a
+Result = 0ffffee1a
+Flag = 0001
+PASS
+Test Case  510 
+A = fffff00f
+B = 000001fe
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case  511 
+A = fffff007
+B = 000001ff
+C = fffff1ff
+Result = 0fffff1ff
+Flag = 0001
+PASS
+Test Case  512 
+A = ffffefff
+B = 00000200
+C = fffff1ff
+Result = 0fffff1ff
+Flag = 0001
+PASS
+Test Case  513 
+A = ffffeff7
+B = 00000201
+C = ffffedf6
+Result = 0ffffedf6
+Flag = 0001
+PASS
+Test Case  514 
+A = ffffefef
+B = 00000202
+C = 00000202
+Result = 000000202
+Flag = 0000
+PASS
+Test Case  515 
+A = ffffefe7
+B = 00000203
+C = ffffefe7
+Result = 0ffffefe7
+Flag = 0001
+PASS
+Test Case  516 
+A = ffffefdf
+B = 00000204
+C = fffff1e3
+Result = 0fffff1e3
+Flag = 0001
+PASS
+Test Case  517 
+A = ffffefd7
+B = 00000205
+C = ffffedd2
+Result = 0ffffedd2
+Flag = 0001
+PASS
+Test Case  518 
+A = ffffefcf
+B = 00000206
+C = 00000206
+Result = 000000206
+Flag = 0000
+PASS
+Test Case  519 
+A = ffffefc7
+B = 00000207
+C = ffffefc7
+Result = 0ffffefc7
+Flag = 0001
+PASS
+Test Case  520 
+A = ffffefbf
+B = 00000208
+C = fffff1c7
+Result = 0fffff1c7
+Flag = 0001
+PASS
+Test Case  521 
+A = ffffefb7
+B = 00000209
+C = ffffedae
+Result = 0ffffedae
+Flag = 0001
+PASS
+Test Case  522 
+A = ffffefaf
+B = 0000020a
+C = 0000020a
+Result = 00000020a
+Flag = 0000
+PASS
+Test Case  523 
+A = ffffefa7
+B = 0000020b
+C = ffffefaf
+Result = 0ffffefaf
+Flag = 0001
+PASS
+Test Case  524 
+A = ffffef9f
+B = 0000020c
+C = fffff1ab
+Result = 0fffff1ab
+Flag = 0001
+PASS
+Test Case  525 
+A = ffffef97
+B = 0000020d
+C = ffffed8a
+Result = 0ffffed8a
+Flag = 0001
+PASS
+Test Case  526 
+A = ffffef8f
+B = 0000020e
+C = 0000020e
+Result = 00000020e
+Flag = 0000
+PASS
+Test Case  527 
+A = ffffef87
+B = 0000020f
+C = ffffef8f
+Result = 0ffffef8f
+Flag = 0001
+PASS
+Test Case  528 
+A = ffffef7f
+B = 00000210
+C = fffff18f
+Result = 0fffff18f
+Flag = 0001
+PASS
+Test Case  529 
+A = ffffef77
+B = 00000211
+C = ffffed66
+Result = 0ffffed66
+Flag = 0001
+PASS
+Test Case  530 
+A = ffffef6f
+B = 00000212
+C = 00000202
+Result = 000000202
+Flag = 0000
+PASS
+Test Case  531 
+A = ffffef67
+B = 00000213
+C = ffffef77
+Result = 0ffffef77
+Flag = 0001
+PASS
+Test Case  532 
+A = ffffef5f
+B = 00000214
+C = fffff173
+Result = 0fffff173
+Flag = 0001
+PASS
+Test Case  533 
+A = ffffef57
+B = 00000215
+C = ffffed42
+Result = 0ffffed42
+Flag = 0001
+PASS
+Test Case  534 
+A = ffffef4f
+B = 00000216
+C = 00000206
+Result = 000000206
+Flag = 0000
+PASS
+Test Case  535 
+A = ffffef47
+B = 00000217
+C = ffffef57
+Result = 0ffffef57
+Flag = 0001
+PASS
+Test Case  536 
+A = ffffef3f
+B = 00000218
+C = fffff157
+Result = 0fffff157
+Flag = 0001
+PASS
+Test Case  537 
+A = ffffef37
+B = 00000219
+C = ffffed1e
+Result = 0ffffed1e
+Flag = 0001
+PASS
+Test Case  538 
+A = ffffef2f
+B = 0000021a
+C = 0000020a
+Result = 00000020a
+Flag = 0000
+PASS
+Test Case  539 
+A = ffffef27
+B = 0000021b
+C = ffffef3f
+Result = 0ffffef3f
+Flag = 0001
+PASS
+Test Case  540 
+A = ffffef1f
+B = 0000021c
+C = fffff13b
+Result = 0fffff13b
+Flag = 0001
+PASS
+Test Case  541 
+A = ffffef17
+B = 0000021d
+C = ffffecfa
+Result = 0ffffecfa
+Flag = 0001
+PASS
+Test Case  542 
+A = ffffef0f
+B = 0000021e
+C = 0000020e
+Result = 00000020e
+Flag = 0000
+PASS
+Test Case  543 
+A = ffffef07
+B = 0000021f
+C = ffffef1f
+Result = 0ffffef1f
+Flag = 0001
+PASS
+Test Case  544 
+A = ffffeeff
+B = 00000220
+C = fffff11f
+Result = 0fffff11f
+Flag = 0001
+PASS
+Test Case  545 
+A = ffffeef7
+B = 00000221
+C = ffffecd6
+Result = 0ffffecd6
+Flag = 0001
+PASS
+Test Case  546 
+A = ffffeeef
+B = 00000222
+C = 00000222
+Result = 000000222
+Flag = 0000
+PASS
+Test Case  547 
+A = ffffeee7
+B = 00000223
+C = ffffeee7
+Result = 0ffffeee7
+Flag = 0001
+PASS
+Test Case  548 
+A = ffffeedf
+B = 00000224
+C = fffff103
+Result = 0fffff103
+Flag = 0001
+PASS
+Test Case  549 
+A = ffffeed7
+B = 00000225
+C = ffffecb2
+Result = 0ffffecb2
+Flag = 0001
+PASS
+Test Case  550 
+A = ffffeecf
+B = 00000226
+C = 00000206
+Result = 000000206
+Flag = 0000
+PASS
+Test Case  551 
+A = ffffeec7
+B = 00000227
+C = ffffeee7
+Result = 0ffffeee7
+Flag = 0001
+PASS
+Test Case  552 
+A = ffffeebf
+B = 00000228
+C = fffff0e7
+Result = 0fffff0e7
+Flag = 0001
+PASS
+Test Case  553 
+A = ffffeeb7
+B = 00000229
+C = ffffec8e
+Result = 0ffffec8e
+Flag = 0001
+PASS
+Test Case  554 
+A = ffffeeaf
+B = 0000022a
+C = 0000022a
+Result = 00000022a
+Flag = 0000
+PASS
+Test Case  555 
+A = ffffeea7
+B = 0000022b
+C = ffffeeaf
+Result = 0ffffeeaf
+Flag = 0001
+PASS
+Test Case  556 
+A = ffffee9f
+B = 0000022c
+C = fffff0cb
+Result = 0fffff0cb
+Flag = 0001
+PASS
+Test Case  557 
+A = ffffee97
+B = 0000022d
+C = ffffec6a
+Result = 0ffffec6a
+Flag = 0001
+PASS
+Test Case  558 
+A = ffffee8f
+B = 0000022e
+C = 0000020e
+Result = 00000020e
+Flag = 0000
+PASS
+Test Case  559 
+A = ffffee87
+B = 0000022f
+C = ffffeeaf
+Result = 0ffffeeaf
+Flag = 0001
+PASS
+Test Case  560 
+A = ffffee7f
+B = 00000230
+C = fffff0af
+Result = 0fffff0af
+Flag = 0001
+PASS
+Test Case  561 
+A = ffffee77
+B = 00000231
+C = ffffec46
+Result = 0ffffec46
+Flag = 0001
+PASS
+Test Case  562 
+A = ffffee6f
+B = 00000232
+C = 00000222
+Result = 000000222
+Flag = 0000
+PASS
+Test Case  563 
+A = ffffee67
+B = 00000233
+C = ffffee77
+Result = 0ffffee77
+Flag = 0001
+PASS
+Test Case  564 
+A = ffffee5f
+B = 00000234
+C = fffff093
+Result = 0fffff093
+Flag = 0001
+PASS
+Test Case  565 
+A = ffffee57
+B = 00000235
+C = ffffec22
+Result = 0ffffec22
+Flag = 0001
+PASS
+Test Case  566 
+A = ffffee4f
+B = 00000236
+C = 00000206
+Result = 000000206
+Flag = 0000
+PASS
+Test Case  567 
+A = ffffee47
+B = 00000237
+C = ffffee77
+Result = 0ffffee77
+Flag = 0001
+PASS
+Test Case  568 
+A = ffffee3f
+B = 00000238
+C = fffff077
+Result = 0fffff077
+Flag = 0001
+PASS
+Test Case  569 
+A = ffffee37
+B = 00000239
+C = ffffebfe
+Result = 0ffffebfe
+Flag = 0001
+PASS
+Test Case  570 
+A = ffffee2f
+B = 0000023a
+C = 0000022a
+Result = 00000022a
+Flag = 0000
+PASS
+Test Case  571 
+A = ffffee27
+B = 0000023b
+C = ffffee3f
+Result = 0ffffee3f
+Flag = 0001
+PASS
+Test Case  572 
+A = ffffee1f
+B = 0000023c
+C = fffff05b
+Result = 0fffff05b
+Flag = 0001
+PASS
+Test Case  573 
+A = ffffee17
+B = 0000023d
+C = ffffebda
+Result = 0ffffebda
+Flag = 0001
+PASS
+Test Case  574 
+A = ffffee0f
+B = 0000023e
+C = 0000020e
+Result = 00000020e
+Flag = 0000
+PASS
+Test Case  575 
+A = ffffee07
+B = 0000023f
+C = ffffee3f
+Result = 0ffffee3f
+Flag = 0001
+PASS
+Test Case  576 
+A = ffffedff
+B = 00000240
+C = fffff03f
+Result = 0fffff03f
+Flag = 0001
+PASS
+Test Case  577 
+A = ffffedf7
+B = 00000241
+C = ffffebb6
+Result = 0ffffebb6
+Flag = 0001
+PASS
+Test Case  578 
+A = ffffedef
+B = 00000242
+C = 00000042
+Result = 000000042
+Flag = 0000
+PASS
+Test Case  579 
+A = ffffede7
+B = 00000243
+C = ffffefe7
+Result = 0ffffefe7
+Flag = 0001
+PASS
+Test Case  580 
+A = ffffeddf
+B = 00000244
+C = fffff023
+Result = 0fffff023
+Flag = 0001
+PASS
+Test Case  581 
+A = ffffedd7
+B = 00000245
+C = ffffeb92
+Result = 0ffffeb92
+Flag = 0001
+PASS
+Test Case  582 
+A = ffffedcf
+B = 00000246
+C = 00000046
+Result = 000000046
+Flag = 0000
+PASS
+Test Case  583 
+A = ffffedc7
+B = 00000247
+C = ffffefc7
+Result = 0ffffefc7
+Flag = 0001
+PASS
+Test Case  584 
+A = ffffedbf
+B = 00000248
+C = fffff007
+Result = 0fffff007
+Flag = 0001
+PASS
+Test Case  585 
+A = ffffedb7
+B = 00000249
+C = ffffeb6e
+Result = 0ffffeb6e
+Flag = 0001
+PASS
+Test Case  586 
+A = ffffedaf
+B = 0000024a
+C = 0000000a
+Result = 00000000a
+Flag = 0000
+PASS
+Test Case  587 
+A = ffffeda7
+B = 0000024b
+C = ffffefef
+Result = 0ffffefef
+Flag = 0001
+PASS
+Test Case  588 
+A = ffffed9f
+B = 0000024c
+C = ffffefeb
+Result = 0ffffefeb
+Flag = 0001
+PASS
+Test Case  589 
+A = ffffed97
+B = 0000024d
+C = ffffeb4a
+Result = 0ffffeb4a
+Flag = 0001
+PASS
+Test Case  590 
+A = ffffed8f
+B = 0000024e
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case  591 
+A = ffffed87
+B = 0000024f
+C = ffffefcf
+Result = 0ffffefcf
+Flag = 0001
+PASS
+Test Case  592 
+A = ffffed7f
+B = 00000250
+C = ffffefcf
+Result = 0ffffefcf
+Flag = 0001
+PASS
+Test Case  593 
+A = ffffed77
+B = 00000251
+C = ffffeb26
+Result = 0ffffeb26
+Flag = 0001
+PASS
+Test Case  594 
+A = ffffed6f
+B = 00000252
+C = 00000042
+Result = 000000042
+Flag = 0000
+PASS
+Test Case  595 
+A = ffffed67
+B = 00000253
+C = ffffef77
+Result = 0ffffef77
+Flag = 0001
+PASS
+Test Case  596 
+A = ffffed5f
+B = 00000254
+C = ffffefb3
+Result = 0ffffefb3
+Flag = 0001
+PASS
+Test Case  597 
+A = ffffed57
+B = 00000255
+C = ffffeb02
+Result = 0ffffeb02
+Flag = 0001
+PASS
+Test Case  598 
+A = ffffed4f
+B = 00000256
+C = 00000046
+Result = 000000046
+Flag = 0000
+PASS
+Test Case  599 
+A = ffffed47
+B = 00000257
+C = ffffef57
+Result = 0ffffef57
+Flag = 0001
+PASS
+Test Case  600 
+A = ffffed3f
+B = 00000258
+C = ffffef97
+Result = 0ffffef97
+Flag = 0001
+PASS
+Test Case  601 
+A = ffffed37
+B = 00000259
+C = ffffeade
+Result = 0ffffeade
+Flag = 0001
+PASS
+Test Case  602 
+A = ffffed2f
+B = 0000025a
+C = 0000000a
+Result = 00000000a
+Flag = 0000
+PASS
+Test Case  603 
+A = ffffed27
+B = 0000025b
+C = ffffef7f
+Result = 0ffffef7f
+Flag = 0001
+PASS
+Test Case  604 
+A = ffffed1f
+B = 0000025c
+C = ffffef7b
+Result = 0ffffef7b
+Flag = 0001
+PASS
+Test Case  605 
+A = ffffed17
+B = 0000025d
+C = ffffeaba
+Result = 0ffffeaba
+Flag = 0001
+PASS
+Test Case  606 
+A = ffffed0f
+B = 0000025e
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case  607 
+A = ffffed07
+B = 0000025f
+C = ffffef5f
+Result = 0ffffef5f
+Flag = 0001
+PASS
+Test Case  608 
+A = ffffecff
+B = 00000260
+C = ffffef5f
+Result = 0ffffef5f
+Flag = 0001
+PASS
+Test Case  609 
+A = ffffecf7
+B = 00000261
+C = ffffea96
+Result = 0ffffea96
+Flag = 0001
+PASS
+Test Case  610 
+A = ffffecef
+B = 00000262
+C = 00000062
+Result = 000000062
+Flag = 0000
+PASS
+Test Case  611 
+A = ffffece7
+B = 00000263
+C = ffffeee7
+Result = 0ffffeee7
+Flag = 0001
+PASS
+Test Case  612 
+A = ffffecdf
+B = 00000264
+C = ffffef43
+Result = 0ffffef43
+Flag = 0001
+PASS
+Test Case  613 
+A = ffffecd7
+B = 00000265
+C = ffffea72
+Result = 0ffffea72
+Flag = 0001
+PASS
+Test Case  614 
+A = ffffeccf
+B = 00000266
+C = 00000046
+Result = 000000046
+Flag = 0000
+PASS
+Test Case  615 
+A = ffffecc7
+B = 00000267
+C = ffffeee7
+Result = 0ffffeee7
+Flag = 0001
+PASS
+Test Case  616 
+A = ffffecbf
+B = 00000268
+C = ffffef27
+Result = 0ffffef27
+Flag = 0001
+PASS
+Test Case  617 
+A = ffffecb7
+B = 00000269
+C = ffffea4e
+Result = 0ffffea4e
+Flag = 0001
+PASS
+Test Case  618 
+A = ffffecaf
+B = 0000026a
+C = 0000002a
+Result = 00000002a
+Flag = 0000
+PASS
+Test Case  619 
+A = ffffeca7
+B = 0000026b
+C = ffffeeef
+Result = 0ffffeeef
+Flag = 0001
+PASS
+Test Case  620 
+A = ffffec9f
+B = 0000026c
+C = ffffef0b
+Result = 0ffffef0b
+Flag = 0001
+PASS
+Test Case  621 
+A = ffffec97
+B = 0000026d
+C = ffffea2a
+Result = 0ffffea2a
+Flag = 0001
+PASS
+Test Case  622 
+A = ffffec8f
+B = 0000026e
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case  623 
+A = ffffec87
+B = 0000026f
+C = ffffeeef
+Result = 0ffffeeef
+Flag = 0001
+PASS
+Test Case  624 
+A = ffffec7f
+B = 00000270
+C = ffffeeef
+Result = 0ffffeeef
+Flag = 0001
+PASS
+Test Case  625 
+A = ffffec77
+B = 00000271
+C = ffffea06
+Result = 0ffffea06
+Flag = 0001
+PASS
+Test Case  626 
+A = ffffec6f
+B = 00000272
+C = 00000062
+Result = 000000062
+Flag = 0000
+PASS
+Test Case  627 
+A = ffffec67
+B = 00000273
+C = ffffee77
+Result = 0ffffee77
+Flag = 0001
+PASS
+Test Case  628 
+A = ffffec5f
+B = 00000274
+C = ffffeed3
+Result = 0ffffeed3
+Flag = 0001
+PASS
+Test Case  629 
+A = ffffec57
+B = 00000275
+C = ffffe9e2
+Result = 0ffffe9e2
+Flag = 0001
+PASS
+Test Case  630 
+A = ffffec4f
+B = 00000276
+C = 00000046
+Result = 000000046
+Flag = 0000
+PASS
+Test Case  631 
+A = ffffec47
+B = 00000277
+C = ffffee77
+Result = 0ffffee77
+Flag = 0001
+PASS
+Test Case  632 
+A = ffffec3f
+B = 00000278
+C = ffffeeb7
+Result = 0ffffeeb7
+Flag = 0001
+PASS
+Test Case  633 
+A = ffffec37
+B = 00000279
+C = ffffe9be
+Result = 0ffffe9be
+Flag = 0001
+PASS
+Test Case  634 
+A = ffffec2f
+B = 0000027a
+C = 0000002a
+Result = 00000002a
+Flag = 0000
+PASS
+Test Case  635 
+A = ffffec27
+B = 0000027b
+C = ffffee7f
+Result = 0ffffee7f
+Flag = 0001
+PASS
+Test Case  636 
+A = ffffec1f
+B = 0000027c
+C = ffffee9b
+Result = 0ffffee9b
+Flag = 0001
+PASS
+Test Case  637 
+A = ffffec17
+B = 0000027d
+C = ffffe99a
+Result = 0ffffe99a
+Flag = 0001
+PASS
+Test Case  638 
+A = ffffec0f
+B = 0000027e
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case  639 
+A = ffffec07
+B = 0000027f
+C = ffffee7f
+Result = 0ffffee7f
+Flag = 0001
+PASS
+Test Case  640 
+A = ffffebff
+B = 00000280
+C = ffffee7f
+Result = 0ffffee7f
+Flag = 0001
+PASS
+Test Case  641 
+A = ffffebf7
+B = 00000281
+C = ffffe976
+Result = 0ffffe976
+Flag = 0001
+PASS
+Test Case  642 
+A = ffffebef
+B = 00000282
+C = 00000282
+Result = 000000282
+Flag = 0000
+PASS
+Test Case  643 
+A = ffffebe7
+B = 00000283
+C = ffffebe7
+Result = 0ffffebe7
+Flag = 0001
+PASS
+Test Case  644 
+A = ffffebdf
+B = 00000284
+C = ffffee63
+Result = 0ffffee63
+Flag = 0001
+PASS
+Test Case  645 
+A = ffffebd7
+B = 00000285
+C = ffffe952
+Result = 0ffffe952
+Flag = 0001
+PASS
+Test Case  646 
+A = ffffebcf
+B = 00000286
+C = 00000286
+Result = 000000286
+Flag = 0000
+PASS
+Test Case  647 
+A = ffffebc7
+B = 00000287
+C = ffffebc7
+Result = 0ffffebc7
+Flag = 0001
+PASS
+Test Case  648 
+A = ffffebbf
+B = 00000288
+C = ffffee47
+Result = 0ffffee47
+Flag = 0001
+PASS
+Test Case  649 
+A = ffffebb7
+B = 00000289
+C = ffffe92e
+Result = 0ffffe92e
+Flag = 0001
+PASS
+Test Case  650 
+A = ffffebaf
+B = 0000028a
+C = 0000028a
+Result = 00000028a
+Flag = 0000
+PASS
+Test Case  651 
+A = ffffeba7
+B = 0000028b
+C = ffffebaf
+Result = 0ffffebaf
+Flag = 0001
+PASS
+Test Case  652 
+A = ffffeb9f
+B = 0000028c
+C = ffffee2b
+Result = 0ffffee2b
+Flag = 0001
+PASS
+Test Case  653 
+A = ffffeb97
+B = 0000028d
+C = ffffe90a
+Result = 0ffffe90a
+Flag = 0001
+PASS
+Test Case  654 
+A = ffffeb8f
+B = 0000028e
+C = 0000028e
+Result = 00000028e
+Flag = 0000
+PASS
+Test Case  655 
+A = ffffeb87
+B = 0000028f
+C = ffffeb8f
+Result = 0ffffeb8f
+Flag = 0001
+PASS
+Test Case  656 
+A = ffffeb7f
+B = 00000290
+C = ffffee0f
+Result = 0ffffee0f
+Flag = 0001
+PASS
+Test Case  657 
+A = ffffeb77
+B = 00000291
+C = ffffe8e6
+Result = 0ffffe8e6
+Flag = 0001
+PASS
+Test Case  658 
+A = ffffeb6f
+B = 00000292
+C = 00000202
+Result = 000000202
+Flag = 0000
+PASS
+Test Case  659 
+A = ffffeb67
+B = 00000293
+C = ffffebf7
+Result = 0ffffebf7
+Flag = 0001
+PASS
+Test Case  660 
+A = ffffeb5f
+B = 00000294
+C = ffffedf3
+Result = 0ffffedf3
+Flag = 0001
+PASS
+Test Case  661 
+A = ffffeb57
+B = 00000295
+C = ffffe8c2
+Result = 0ffffe8c2
+Flag = 0001
+PASS
+Test Case  662 
+A = ffffeb4f
+B = 00000296
+C = 00000206
+Result = 000000206
+Flag = 0000
+PASS
+Test Case  663 
+A = ffffeb47
+B = 00000297
+C = ffffebd7
+Result = 0ffffebd7
+Flag = 0001
+PASS
+Test Case  664 
+A = ffffeb3f
+B = 00000298
+C = ffffedd7
+Result = 0ffffedd7
+Flag = 0001
+PASS
+Test Case  665 
+A = ffffeb37
+B = 00000299
+C = ffffe89e
+Result = 0ffffe89e
+Flag = 0001
+PASS
+Test Case  666 
+A = ffffeb2f
+B = 0000029a
+C = 0000020a
+Result = 00000020a
+Flag = 0000
+PASS
+Test Case  667 
+A = ffffeb27
+B = 0000029b
+C = ffffebbf
+Result = 0ffffebbf
+Flag = 0001
+PASS
+Test Case  668 
+A = ffffeb1f
+B = 0000029c
+C = ffffedbb
+Result = 0ffffedbb
+Flag = 0001
+PASS
+Test Case  669 
+A = ffffeb17
+B = 0000029d
+C = ffffe87a
+Result = 0ffffe87a
+Flag = 0001
+PASS
+Test Case  670 
+A = ffffeb0f
+B = 0000029e
+C = 0000020e
+Result = 00000020e
+Flag = 0000
+PASS
+Test Case  671 
+A = ffffeb07
+B = 0000029f
+C = ffffeb9f
+Result = 0ffffeb9f
+Flag = 0001
+PASS
+Test Case  672 
+A = ffffeaff
+B = 000002a0
+C = ffffed9f
+Result = 0ffffed9f
+Flag = 0001
+PASS
+Test Case  673 
+A = ffffeaf7
+B = 000002a1
+C = ffffe856
+Result = 0ffffe856
+Flag = 0001
+PASS
+Test Case  674 
+A = ffffeaef
+B = 000002a2
+C = 000002a2
+Result = 0000002a2
+Flag = 0000
+PASS
+Test Case  675 
+A = ffffeae7
+B = 000002a3
+C = ffffeae7
+Result = 0ffffeae7
+Flag = 0001
+PASS
+Test Case  676 
+A = ffffeadf
+B = 000002a4
+C = ffffed83
+Result = 0ffffed83
+Flag = 0001
+PASS
+Test Case  677 
+A = ffffead7
+B = 000002a5
+C = ffffe832
+Result = 0ffffe832
+Flag = 0001
+PASS
+Test Case  678 
+A = ffffeacf
+B = 000002a6
+C = 00000286
+Result = 000000286
+Flag = 0000
+PASS
+Test Case  679 
+A = ffffeac7
+B = 000002a7
+C = ffffeae7
+Result = 0ffffeae7
+Flag = 0001
+PASS
+Test Case  680 
+A = ffffeabf
+B = 000002a8
+C = ffffed67
+Result = 0ffffed67
+Flag = 0001
+PASS
+Test Case  681 
+A = ffffeab7
+B = 000002a9
+C = ffffe80e
+Result = 0ffffe80e
+Flag = 0001
+PASS
+Test Case  682 
+A = ffffeaaf
+B = 000002aa
+C = 000002aa
+Result = 0000002aa
+Flag = 0000
+PASS
+Test Case  683 
+A = ffffeaa7
+B = 000002ab
+C = ffffeaaf
+Result = 0ffffeaaf
+Flag = 0001
+PASS
+Test Case  684 
+A = ffffea9f
+B = 000002ac
+C = ffffed4b
+Result = 0ffffed4b
+Flag = 0001
+PASS
+Test Case  685 
+A = ffffea97
+B = 000002ad
+C = ffffe7ea
+Result = 0ffffe7ea
+Flag = 0001
+PASS
+Test Case  686 
+A = ffffea8f
+B = 000002ae
+C = 0000028e
+Result = 00000028e
+Flag = 0000
+PASS
+Test Case  687 
+A = ffffea87
+B = 000002af
+C = ffffeaaf
+Result = 0ffffeaaf
+Flag = 0001
+PASS
+Test Case  688 
+A = ffffea7f
+B = 000002b0
+C = ffffed2f
+Result = 0ffffed2f
+Flag = 0001
+PASS
+Test Case  689 
+A = ffffea77
+B = 000002b1
+C = ffffe7c6
+Result = 0ffffe7c6
+Flag = 0001
+PASS
+Test Case  690 
+A = ffffea6f
+B = 000002b2
+C = 00000222
+Result = 000000222
+Flag = 0000
+PASS
+Test Case  691 
+A = ffffea67
+B = 000002b3
+C = ffffeaf7
+Result = 0ffffeaf7
+Flag = 0001
+PASS
+Test Case  692 
+A = ffffea5f
+B = 000002b4
+C = ffffed13
+Result = 0ffffed13
+Flag = 0001
+PASS
+Test Case  693 
+A = ffffea57
+B = 000002b5
+C = ffffe7a2
+Result = 0ffffe7a2
+Flag = 0001
+PASS
+Test Case  694 
+A = ffffea4f
+B = 000002b6
+C = 00000206
+Result = 000000206
+Flag = 0000
+PASS
+Test Case  695 
+A = ffffea47
+B = 000002b7
+C = ffffeaf7
+Result = 0ffffeaf7
+Flag = 0001
+PASS
+Test Case  696 
+A = ffffea3f
+B = 000002b8
+C = ffffecf7
+Result = 0ffffecf7
+Flag = 0001
+PASS
+Test Case  697 
+A = ffffea37
+B = 000002b9
+C = ffffe77e
+Result = 0ffffe77e
+Flag = 0001
+PASS
+Test Case  698 
+A = ffffea2f
+B = 000002ba
+C = 0000022a
+Result = 00000022a
+Flag = 0000
+PASS
+Test Case  699 
+A = ffffea27
+B = 000002bb
+C = ffffeabf
+Result = 0ffffeabf
+Flag = 0001
+PASS
+Test Case  700 
+A = ffffea1f
+B = 000002bc
+C = ffffecdb
+Result = 0ffffecdb
+Flag = 0001
+PASS
+Test Case  701 
+A = ffffea17
+B = 000002bd
+C = ffffe75a
+Result = 0ffffe75a
+Flag = 0001
+PASS
+Test Case  702 
+A = ffffea0f
+B = 000002be
+C = 0000020e
+Result = 00000020e
+Flag = 0000
+PASS
+Test Case  703 
+A = ffffea07
+B = 000002bf
+C = ffffeabf
+Result = 0ffffeabf
+Flag = 0001
+PASS
+Test Case  704 
+A = ffffe9ff
+B = 000002c0
+C = ffffecbf
+Result = 0ffffecbf
+Flag = 0001
+PASS
+Test Case  705 
+A = ffffe9f7
+B = 000002c1
+C = ffffe736
+Result = 0ffffe736
+Flag = 0001
+PASS
+Test Case  706 
+A = ffffe9ef
+B = 000002c2
+C = 000000c2
+Result = 0000000c2
+Flag = 0000
+PASS
+Test Case  707 
+A = ffffe9e7
+B = 000002c3
+C = ffffebe7
+Result = 0ffffebe7
+Flag = 0001
+PASS
+Test Case  708 
+A = ffffe9df
+B = 000002c4
+C = ffffeca3
+Result = 0ffffeca3
+Flag = 0001
+PASS
+Test Case  709 
+A = ffffe9d7
+B = 000002c5
+C = ffffe712
+Result = 0ffffe712
+Flag = 0001
+PASS
+Test Case  710 
+A = ffffe9cf
+B = 000002c6
+C = 000000c6
+Result = 0000000c6
+Flag = 0000
+PASS
+Test Case  711 
+A = ffffe9c7
+B = 000002c7
+C = ffffebc7
+Result = 0ffffebc7
+Flag = 0001
+PASS
+Test Case  712 
+A = ffffe9bf
+B = 000002c8
+C = ffffec87
+Result = 0ffffec87
+Flag = 0001
+PASS
+Test Case  713 
+A = ffffe9b7
+B = 000002c9
+C = ffffe6ee
+Result = 0ffffe6ee
+Flag = 0001
+PASS
+Test Case  714 
+A = ffffe9af
+B = 000002ca
+C = 0000008a
+Result = 00000008a
+Flag = 0000
+PASS
+Test Case  715 
+A = ffffe9a7
+B = 000002cb
+C = ffffebef
+Result = 0ffffebef
+Flag = 0001
+PASS
+Test Case  716 
+A = ffffe99f
+B = 000002cc
+C = ffffec6b
+Result = 0ffffec6b
+Flag = 0001
+PASS
+Test Case  717 
+A = ffffe997
+B = 000002cd
+C = ffffe6ca
+Result = 0ffffe6ca
+Flag = 0001
+PASS
+Test Case  718 
+A = ffffe98f
+B = 000002ce
+C = 0000008e
+Result = 00000008e
+Flag = 0000
+PASS
+Test Case  719 
+A = ffffe987
+B = 000002cf
+C = ffffebcf
+Result = 0ffffebcf
+Flag = 0001
+PASS
+Test Case  720 
+A = ffffe97f
+B = 000002d0
+C = ffffec4f
+Result = 0ffffec4f
+Flag = 0001
+PASS
+Test Case  721 
+A = ffffe977
+B = 000002d1
+C = ffffe6a6
+Result = 0ffffe6a6
+Flag = 0001
+PASS
+Test Case  722 
+A = ffffe96f
+B = 000002d2
+C = 00000042
+Result = 000000042
+Flag = 0000
+PASS
+Test Case  723 
+A = ffffe967
+B = 000002d3
+C = ffffebf7
+Result = 0ffffebf7
+Flag = 0001
+PASS
+Test Case  724 
+A = ffffe95f
+B = 000002d4
+C = ffffec33
+Result = 0ffffec33
+Flag = 0001
+PASS
+Test Case  725 
+A = ffffe957
+B = 000002d5
+C = ffffe682
+Result = 0ffffe682
+Flag = 0001
+PASS
+Test Case  726 
+A = ffffe94f
+B = 000002d6
+C = 00000046
+Result = 000000046
+Flag = 0000
+PASS
+Test Case  727 
+A = ffffe947
+B = 000002d7
+C = ffffebd7
+Result = 0ffffebd7
+Flag = 0001
+PASS
+Test Case  728 
+A = ffffe93f
+B = 000002d8
+C = ffffec17
+Result = 0ffffec17
+Flag = 0001
+PASS
+Test Case  729 
+A = ffffe937
+B = 000002d9
+C = ffffe65e
+Result = 0ffffe65e
+Flag = 0001
+PASS
+Test Case  730 
+A = ffffe92f
+B = 000002da
+C = 0000000a
+Result = 00000000a
+Flag = 0000
+PASS
+Test Case  731 
+A = ffffe927
+B = 000002db
+C = ffffebff
+Result = 0ffffebff
+Flag = 0001
+PASS
+Test Case  732 
+A = ffffe91f
+B = 000002dc
+C = ffffebfb
+Result = 0ffffebfb
+Flag = 0001
+PASS
+Test Case  733 
+A = ffffe917
+B = 000002dd
+C = ffffe63a
+Result = 0ffffe63a
+Flag = 0001
+PASS
+Test Case  734 
+A = ffffe90f
+B = 000002de
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case  735 
+A = ffffe907
+B = 000002df
+C = ffffebdf
+Result = 0ffffebdf
+Flag = 0001
+PASS
+Test Case  736 
+A = ffffe8ff
+B = 000002e0
+C = ffffebdf
+Result = 0ffffebdf
+Flag = 0001
+PASS
+Test Case  737 
+A = ffffe8f7
+B = 000002e1
+C = ffffe616
+Result = 0ffffe616
+Flag = 0001
+PASS
+Test Case  738 
+A = ffffe8ef
+B = 000002e2
+C = 000000e2
+Result = 0000000e2
+Flag = 0000
+PASS
+Test Case  739 
+A = ffffe8e7
+B = 000002e3
+C = ffffeae7
+Result = 0ffffeae7
+Flag = 0001
+PASS
+Test Case  740 
+A = ffffe8df
+B = 000002e4
+C = ffffebc3
+Result = 0ffffebc3
+Flag = 0001
+PASS
+Test Case  741 
+A = ffffe8d7
+B = 000002e5
+C = ffffe5f2
+Result = 0ffffe5f2
+Flag = 0001
+PASS
+Test Case  742 
+A = ffffe8cf
+B = 000002e6
+C = 000000c6
+Result = 0000000c6
+Flag = 0000
+PASS
+Test Case  743 
+A = ffffe8c7
+B = 000002e7
+C = ffffeae7
+Result = 0ffffeae7
+Flag = 0001
+PASS
+Test Case  744 
+A = ffffe8bf
+B = 000002e8
+C = ffffeba7
+Result = 0ffffeba7
+Flag = 0001
+PASS
+Test Case  745 
+A = ffffe8b7
+B = 000002e9
+C = ffffe5ce
+Result = 0ffffe5ce
+Flag = 0001
+PASS
+Test Case  746 
+A = ffffe8af
+B = 000002ea
+C = 000000aa
+Result = 0000000aa
+Flag = 0000
+PASS
+Test Case  747 
+A = ffffe8a7
+B = 000002eb
+C = ffffeaef
+Result = 0ffffeaef
+Flag = 0001
+PASS
+Test Case  748 
+A = ffffe89f
+B = 000002ec
+C = ffffeb8b
+Result = 0ffffeb8b
+Flag = 0001
+PASS
+Test Case  749 
+A = ffffe897
+B = 000002ed
+C = ffffe5aa
+Result = 0ffffe5aa
+Flag = 0001
+PASS
+Test Case  750 
+A = ffffe88f
+B = 000002ee
+C = 0000008e
+Result = 00000008e
+Flag = 0000
+PASS
+Test Case  751 
+A = ffffe887
+B = 000002ef
+C = ffffeaef
+Result = 0ffffeaef
+Flag = 0001
+PASS
+Test Case  752 
+A = ffffe87f
+B = 000002f0
+C = ffffeb6f
+Result = 0ffffeb6f
+Flag = 0001
+PASS
+Test Case  753 
+A = ffffe877
+B = 000002f1
+C = ffffe586
+Result = 0ffffe586
+Flag = 0001
+PASS
+Test Case  754 
+A = ffffe86f
+B = 000002f2
+C = 00000062
+Result = 000000062
+Flag = 0000
+PASS
+Test Case  755 
+A = ffffe867
+B = 000002f3
+C = ffffeaf7
+Result = 0ffffeaf7
+Flag = 0001
+PASS
+Test Case  756 
+A = ffffe85f
+B = 000002f4
+C = ffffeb53
+Result = 0ffffeb53
+Flag = 0001
+PASS
+Test Case  757 
+A = ffffe857
+B = 000002f5
+C = ffffe562
+Result = 0ffffe562
+Flag = 0001
+PASS
+Test Case  758 
+A = ffffe84f
+B = 000002f6
+C = 00000046
+Result = 000000046
+Flag = 0000
+PASS
+Test Case  759 
+A = ffffe847
+B = 000002f7
+C = ffffeaf7
+Result = 0ffffeaf7
+Flag = 0001
+PASS
+Test Case  760 
+A = ffffe83f
+B = 000002f8
+C = ffffeb37
+Result = 0ffffeb37
+Flag = 0001
+PASS
+Test Case  761 
+A = ffffe837
+B = 000002f9
+C = ffffe53e
+Result = 0ffffe53e
+Flag = 0001
+PASS
+Test Case  762 
+A = ffffe82f
+B = 000002fa
+C = 0000002a
+Result = 00000002a
+Flag = 0000
+PASS
+Test Case  763 
+A = ffffe827
+B = 000002fb
+C = ffffeaff
+Result = 0ffffeaff
+Flag = 0001
+PASS
+Test Case  764 
+A = ffffe81f
+B = 000002fc
+C = ffffeb1b
+Result = 0ffffeb1b
+Flag = 0001
+PASS
+Test Case  765 
+A = ffffe817
+B = 000002fd
+C = ffffe51a
+Result = 0ffffe51a
+Flag = 0001
+PASS
+Test Case  766 
+A = ffffe80f
+B = 000002fe
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case  767 
+A = ffffe807
+B = 000002ff
+C = ffffeaff
+Result = 0ffffeaff
+Flag = 0001
+PASS
+Test Case  768 
+A = ffffe7ff
+B = 00000300
+C = ffffeaff
+Result = 0ffffeaff
+Flag = 0001
+PASS
+Test Case  769 
+A = ffffe7f7
+B = 00000301
+C = ffffe4f6
+Result = 0ffffe4f6
+Flag = 0001
+PASS
+Test Case  770 
+A = ffffe7ef
+B = 00000302
+C = 00000302
+Result = 000000302
+Flag = 0000
+PASS
+Test Case  771 
+A = ffffe7e7
+B = 00000303
+C = ffffe7e7
+Result = 0ffffe7e7
+Flag = 0001
+PASS
+Test Case  772 
+A = ffffe7df
+B = 00000304
+C = ffffeae3
+Result = 0ffffeae3
+Flag = 0001
+PASS
+Test Case  773 
+A = ffffe7d7
+B = 00000305
+C = ffffe4d2
+Result = 0ffffe4d2
+Flag = 0001
+PASS
+Test Case  774 
+A = ffffe7cf
+B = 00000306
+C = 00000306
+Result = 000000306
+Flag = 0000
+PASS
+Test Case  775 
+A = ffffe7c7
+B = 00000307
+C = ffffe7c7
+Result = 0ffffe7c7
+Flag = 0001
+PASS
+Test Case  776 
+A = ffffe7bf
+B = 00000308
+C = ffffeac7
+Result = 0ffffeac7
+Flag = 0001
+PASS
+Test Case  777 
+A = ffffe7b7
+B = 00000309
+C = ffffe4ae
+Result = 0ffffe4ae
+Flag = 0001
+PASS
+Test Case  778 
+A = ffffe7af
+B = 0000030a
+C = 0000030a
+Result = 00000030a
+Flag = 0000
+PASS
+Test Case  779 
+A = ffffe7a7
+B = 0000030b
+C = ffffe7af
+Result = 0ffffe7af
+Flag = 0001
+PASS
+Test Case  780 
+A = ffffe79f
+B = 0000030c
+C = ffffeaab
+Result = 0ffffeaab
+Flag = 0001
+PASS
+Test Case  781 
+A = ffffe797
+B = 0000030d
+C = ffffe48a
+Result = 0ffffe48a
+Flag = 0001
+PASS
+Test Case  782 
+A = ffffe78f
+B = 0000030e
+C = 0000030e
+Result = 00000030e
+Flag = 0000
+PASS
+Test Case  783 
+A = ffffe787
+B = 0000030f
+C = ffffe78f
+Result = 0ffffe78f
+Flag = 0001
+PASS
+Test Case  784 
+A = ffffe77f
+B = 00000310
+C = ffffea8f
+Result = 0ffffea8f
+Flag = 0001
+PASS
+Test Case  785 
+A = ffffe777
+B = 00000311
+C = ffffe466
+Result = 0ffffe466
+Flag = 0001
+PASS
+Test Case  786 
+A = ffffe76f
+B = 00000312
+C = 00000302
+Result = 000000302
+Flag = 0000
+PASS
+Test Case  787 
+A = ffffe767
+B = 00000313
+C = ffffe777
+Result = 0ffffe777
+Flag = 0001
+PASS
+Test Case  788 
+A = ffffe75f
+B = 00000314
+C = ffffea73
+Result = 0ffffea73
+Flag = 0001
+PASS
+Test Case  789 
+A = ffffe757
+B = 00000315
+C = ffffe442
+Result = 0ffffe442
+Flag = 0001
+PASS
+Test Case  790 
+A = ffffe74f
+B = 00000316
+C = 00000306
+Result = 000000306
+Flag = 0000
+PASS
+Test Case  791 
+A = ffffe747
+B = 00000317
+C = ffffe757
+Result = 0ffffe757
+Flag = 0001
+PASS
+Test Case  792 
+A = ffffe73f
+B = 00000318
+C = ffffea57
+Result = 0ffffea57
+Flag = 0001
+PASS
+Test Case  793 
+A = ffffe737
+B = 00000319
+C = ffffe41e
+Result = 0ffffe41e
+Flag = 0001
+PASS
+Test Case  794 
+A = ffffe72f
+B = 0000031a
+C = 0000030a
+Result = 00000030a
+Flag = 0000
+PASS
+Test Case  795 
+A = ffffe727
+B = 0000031b
+C = ffffe73f
+Result = 0ffffe73f
+Flag = 0001
+PASS
+Test Case  796 
+A = ffffe71f
+B = 0000031c
+C = ffffea3b
+Result = 0ffffea3b
+Flag = 0001
+PASS
+Test Case  797 
+A = ffffe717
+B = 0000031d
+C = ffffe3fa
+Result = 0ffffe3fa
+Flag = 0001
+PASS
+Test Case  798 
+A = ffffe70f
+B = 0000031e
+C = 0000030e
+Result = 00000030e
+Flag = 0000
+PASS
+Test Case  799 
+A = ffffe707
+B = 0000031f
+C = ffffe71f
+Result = 0ffffe71f
+Flag = 0001
+PASS
+Test Case  800 
+A = ffffe6ff
+B = 00000320
+C = ffffea1f
+Result = 0ffffea1f
+Flag = 0001
+PASS
+Test Case  801 
+A = ffffe6f7
+B = 00000321
+C = ffffe3d6
+Result = 0ffffe3d6
+Flag = 0001
+PASS
+Test Case  802 
+A = ffffe6ef
+B = 00000322
+C = 00000222
+Result = 000000222
+Flag = 0000
+PASS
+Test Case  803 
+A = ffffe6e7
+B = 00000323
+C = ffffe7e7
+Result = 0ffffe7e7
+Flag = 0001
+PASS
+Test Case  804 
+A = ffffe6df
+B = 00000324
+C = ffffea03
+Result = 0ffffea03
+Flag = 0001
+PASS
+Test Case  805 
+A = ffffe6d7
+B = 00000325
+C = ffffe3b2
+Result = 0ffffe3b2
+Flag = 0001
+PASS
+Test Case  806 
+A = ffffe6cf
+B = 00000326
+C = 00000206
+Result = 000000206
+Flag = 0000
+PASS
+Test Case  807 
+A = ffffe6c7
+B = 00000327
+C = ffffe7e7
+Result = 0ffffe7e7
+Flag = 0001
+PASS
+Test Case  808 
+A = ffffe6bf
+B = 00000328
+C = ffffe9e7
+Result = 0ffffe9e7
+Flag = 0001
+PASS
+Test Case  809 
+A = ffffe6b7
+B = 00000329
+C = ffffe38e
+Result = 0ffffe38e
+Flag = 0001
+PASS
+Test Case  810 
+A = ffffe6af
+B = 0000032a
+C = 0000022a
+Result = 00000022a
+Flag = 0000
+PASS
+Test Case  811 
+A = ffffe6a7
+B = 0000032b
+C = ffffe7af
+Result = 0ffffe7af
+Flag = 0001
+PASS
+Test Case  812 
+A = ffffe69f
+B = 0000032c
+C = ffffe9cb
+Result = 0ffffe9cb
+Flag = 0001
+PASS
+Test Case  813 
+A = ffffe697
+B = 0000032d
+C = ffffe36a
+Result = 0ffffe36a
+Flag = 0001
+PASS
+Test Case  814 
+A = ffffe68f
+B = 0000032e
+C = 0000020e
+Result = 00000020e
+Flag = 0000
+PASS
+Test Case  815 
+A = ffffe687
+B = 0000032f
+C = ffffe7af
+Result = 0ffffe7af
+Flag = 0001
+PASS
+Test Case  816 
+A = ffffe67f
+B = 00000330
+C = ffffe9af
+Result = 0ffffe9af
+Flag = 0001
+PASS
+Test Case  817 
+A = ffffe677
+B = 00000331
+C = ffffe346
+Result = 0ffffe346
+Flag = 0001
+PASS
+Test Case  818 
+A = ffffe66f
+B = 00000332
+C = 00000222
+Result = 000000222
+Flag = 0000
+PASS
+Test Case  819 
+A = ffffe667
+B = 00000333
+C = ffffe777
+Result = 0ffffe777
+Flag = 0001
+PASS
+Test Case  820 
+A = ffffe65f
+B = 00000334
+C = ffffe993
+Result = 0ffffe993
+Flag = 0001
+PASS
+Test Case  821 
+A = ffffe657
+B = 00000335
+C = ffffe322
+Result = 0ffffe322
+Flag = 0001
+PASS
+Test Case  822 
+A = ffffe64f
+B = 00000336
+C = 00000206
+Result = 000000206
+Flag = 0000
+PASS
+Test Case  823 
+A = ffffe647
+B = 00000337
+C = ffffe777
+Result = 0ffffe777
+Flag = 0001
+PASS
+Test Case  824 
+A = ffffe63f
+B = 00000338
+C = ffffe977
+Result = 0ffffe977
+Flag = 0001
+PASS
+Test Case  825 
+A = ffffe637
+B = 00000339
+C = ffffe2fe
+Result = 0ffffe2fe
+Flag = 0001
+PASS
+Test Case  826 
+A = ffffe62f
+B = 0000033a
+C = 0000022a
+Result = 00000022a
+Flag = 0000
+PASS
+Test Case  827 
+A = ffffe627
+B = 0000033b
+C = ffffe73f
+Result = 0ffffe73f
+Flag = 0001
+PASS
+Test Case  828 
+A = ffffe61f
+B = 0000033c
+C = ffffe95b
+Result = 0ffffe95b
+Flag = 0001
+PASS
+Test Case  829 
+A = ffffe617
+B = 0000033d
+C = ffffe2da
+Result = 0ffffe2da
+Flag = 0001
+PASS
+Test Case  830 
+A = ffffe60f
+B = 0000033e
+C = 0000020e
+Result = 00000020e
+Flag = 0000
+PASS
+Test Case  831 
+A = ffffe607
+B = 0000033f
+C = ffffe73f
+Result = 0ffffe73f
+Flag = 0001
+PASS
+Test Case  832 
+A = ffffe5ff
+B = 00000340
+C = ffffe93f
+Result = 0ffffe93f
+Flag = 0001
+PASS
+Test Case  833 
+A = ffffe5f7
+B = 00000341
+C = ffffe2b6
+Result = 0ffffe2b6
+Flag = 0001
+PASS
+Test Case  834 
+A = ffffe5ef
+B = 00000342
+C = 00000142
+Result = 000000142
+Flag = 0000
+PASS
+Test Case  835 
+A = ffffe5e7
+B = 00000343
+C = ffffe7e7
+Result = 0ffffe7e7
+Flag = 0001
+PASS
+Test Case  836 
+A = ffffe5df
+B = 00000344
+C = ffffe923
+Result = 0ffffe923
+Flag = 0001
+PASS
+Test Case  837 
+A = ffffe5d7
+B = 00000345
+C = ffffe292
+Result = 0ffffe292
+Flag = 0001
+PASS
+Test Case  838 
+A = ffffe5cf
+B = 00000346
+C = 00000146
+Result = 000000146
+Flag = 0000
+PASS
+Test Case  839 
+A = ffffe5c7
+B = 00000347
+C = ffffe7c7
+Result = 0ffffe7c7
+Flag = 0001
+PASS
+Test Case  840 
+A = ffffe5bf
+B = 00000348
+C = ffffe907
+Result = 0ffffe907
+Flag = 0001
+PASS
+Test Case  841 
+A = ffffe5b7
+B = 00000349
+C = ffffe26e
+Result = 0ffffe26e
+Flag = 0001
+PASS
+Test Case  842 
+A = ffffe5af
+B = 0000034a
+C = 0000010a
+Result = 00000010a
+Flag = 0000
+PASS
+Test Case  843 
+A = ffffe5a7
+B = 0000034b
+C = ffffe7ef
+Result = 0ffffe7ef
+Flag = 0001
+PASS
+Test Case  844 
+A = ffffe59f
+B = 0000034c
+C = ffffe8eb
+Result = 0ffffe8eb
+Flag = 0001
+PASS
+Test Case  845 
+A = ffffe597
+B = 0000034d
+C = ffffe24a
+Result = 0ffffe24a
+Flag = 0001
+PASS
+Test Case  846 
+A = ffffe58f
+B = 0000034e
+C = 0000010e
+Result = 00000010e
+Flag = 0000
+PASS
+Test Case  847 
+A = ffffe587
+B = 0000034f
+C = ffffe7cf
+Result = 0ffffe7cf
+Flag = 0001
+PASS
+Test Case  848 
+A = ffffe57f
+B = 00000350
+C = ffffe8cf
+Result = 0ffffe8cf
+Flag = 0001
+PASS
+Test Case  849 
+A = ffffe577
+B = 00000351
+C = ffffe226
+Result = 0ffffe226
+Flag = 0001
+PASS
+Test Case  850 
+A = ffffe56f
+B = 00000352
+C = 00000142
+Result = 000000142
+Flag = 0000
+PASS
+Test Case  851 
+A = ffffe567
+B = 00000353
+C = ffffe777
+Result = 0ffffe777
+Flag = 0001
+PASS
+Test Case  852 
+A = ffffe55f
+B = 00000354
+C = ffffe8b3
+Result = 0ffffe8b3
+Flag = 0001
+PASS
+Test Case  853 
+A = ffffe557
+B = 00000355
+C = ffffe202
+Result = 0ffffe202
+Flag = 0001
+PASS
+Test Case  854 
+A = ffffe54f
+B = 00000356
+C = 00000146
+Result = 000000146
+Flag = 0000
+PASS
+Test Case  855 
+A = ffffe547
+B = 00000357
+C = ffffe757
+Result = 0ffffe757
+Flag = 0001
+PASS
+Test Case  856 
+A = ffffe53f
+B = 00000358
+C = ffffe897
+Result = 0ffffe897
+Flag = 0001
+PASS
+Test Case  857 
+A = ffffe537
+B = 00000359
+C = ffffe1de
+Result = 0ffffe1de
+Flag = 0001
+PASS
+Test Case  858 
+A = ffffe52f
+B = 0000035a
+C = 0000010a
+Result = 00000010a
+Flag = 0000
+PASS
+Test Case  859 
+A = ffffe527
+B = 0000035b
+C = ffffe77f
+Result = 0ffffe77f
+Flag = 0001
+PASS
+Test Case  860 
+A = ffffe51f
+B = 0000035c
+C = ffffe87b
+Result = 0ffffe87b
+Flag = 0001
+PASS
+Test Case  861 
+A = ffffe517
+B = 0000035d
+C = ffffe1ba
+Result = 0ffffe1ba
+Flag = 0001
+PASS
+Test Case  862 
+A = ffffe50f
+B = 0000035e
+C = 0000010e
+Result = 00000010e
+Flag = 0000
+PASS
+Test Case  863 
+A = ffffe507
+B = 0000035f
+C = ffffe75f
+Result = 0ffffe75f
+Flag = 0001
+PASS
+Test Case  864 
+A = ffffe4ff
+B = 00000360
+C = ffffe85f
+Result = 0ffffe85f
+Flag = 0001
+PASS
+Test Case  865 
+A = ffffe4f7
+B = 00000361
+C = ffffe196
+Result = 0ffffe196
+Flag = 0001
+PASS
+Test Case  866 
+A = ffffe4ef
+B = 00000362
+C = 00000062
+Result = 000000062
+Flag = 0000
+PASS
+Test Case  867 
+A = ffffe4e7
+B = 00000363
+C = ffffe7e7
+Result = 0ffffe7e7
+Flag = 0001
+PASS
+Test Case  868 
+A = ffffe4df
+B = 00000364
+C = ffffe843
+Result = 0ffffe843
+Flag = 0001
+PASS
+Test Case  869 
+A = ffffe4d7
+B = 00000365
+C = ffffe172
+Result = 0ffffe172
+Flag = 0001
+PASS
+Test Case  870 
+A = ffffe4cf
+B = 00000366
+C = 00000046
+Result = 000000046
+Flag = 0000
+PASS
+Test Case  871 
+A = ffffe4c7
+B = 00000367
+C = ffffe7e7
+Result = 0ffffe7e7
+Flag = 0001
+PASS
+Test Case  872 
+A = ffffe4bf
+B = 00000368
+C = ffffe827
+Result = 0ffffe827
+Flag = 0001
+PASS
+Test Case  873 
+A = ffffe4b7
+B = 00000369
+C = ffffe14e
+Result = 0ffffe14e
+Flag = 0001
+PASS
+Test Case  874 
+A = ffffe4af
+B = 0000036a
+C = 0000002a
+Result = 00000002a
+Flag = 0000
+PASS
+Test Case  875 
+A = ffffe4a7
+B = 0000036b
+C = ffffe7ef
+Result = 0ffffe7ef
+Flag = 0001
+PASS
+Test Case  876 
+A = ffffe49f
+B = 0000036c
+C = ffffe80b
+Result = 0ffffe80b
+Flag = 0001
+PASS
+Test Case  877 
+A = ffffe497
+B = 0000036d
+C = ffffe12a
+Result = 0ffffe12a
+Flag = 0001
+PASS
+Test Case  878 
+A = ffffe48f
+B = 0000036e
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case  879 
+A = ffffe487
+B = 0000036f
+C = ffffe7ef
+Result = 0ffffe7ef
+Flag = 0001
+PASS
+Test Case  880 
+A = ffffe47f
+B = 00000370
+C = ffffe7ef
+Result = 0ffffe7ef
+Flag = 0001
+PASS
+Test Case  881 
+A = ffffe477
+B = 00000371
+C = ffffe106
+Result = 0ffffe106
+Flag = 0001
+PASS
+Test Case  882 
+A = ffffe46f
+B = 00000372
+C = 00000062
+Result = 000000062
+Flag = 0000
+PASS
+Test Case  883 
+A = ffffe467
+B = 00000373
+C = ffffe777
+Result = 0ffffe777
+Flag = 0001
+PASS
+Test Case  884 
+A = ffffe45f
+B = 00000374
+C = ffffe7d3
+Result = 0ffffe7d3
+Flag = 0001
+PASS
+Test Case  885 
+A = ffffe457
+B = 00000375
+C = ffffe0e2
+Result = 0ffffe0e2
+Flag = 0001
+PASS
+Test Case  886 
+A = ffffe44f
+B = 00000376
+C = 00000046
+Result = 000000046
+Flag = 0000
+PASS
+Test Case  887 
+A = ffffe447
+B = 00000377
+C = ffffe777
+Result = 0ffffe777
+Flag = 0001
+PASS
+Test Case  888 
+A = ffffe43f
+B = 00000378
+C = ffffe7b7
+Result = 0ffffe7b7
+Flag = 0001
+PASS
+Test Case  889 
+A = ffffe437
+B = 00000379
+C = ffffe0be
+Result = 0ffffe0be
+Flag = 0001
+PASS
+Test Case  890 
+A = ffffe42f
+B = 0000037a
+C = 0000002a
+Result = 00000002a
+Flag = 0000
+PASS
+Test Case  891 
+A = ffffe427
+B = 0000037b
+C = ffffe77f
+Result = 0ffffe77f
+Flag = 0001
+PASS
+Test Case  892 
+A = ffffe41f
+B = 0000037c
+C = ffffe79b
+Result = 0ffffe79b
+Flag = 0001
+PASS
+Test Case  893 
+A = ffffe417
+B = 0000037d
+C = ffffe09a
+Result = 0ffffe09a
+Flag = 0001
+PASS
+Test Case  894 
+A = ffffe40f
+B = 0000037e
+C = 0000000e
+Result = 00000000e
+Flag = 0000
+PASS
+Test Case  895 
+A = ffffe407
+B = 0000037f
+C = ffffe77f
+Result = 0ffffe77f
+Flag = 0001
+PASS
+Test Case  896 
+A = ffffe3ff
+B = 00000380
+C = ffffe77f
+Result = 0ffffe77f
+Flag = 0001
+PASS
+Test Case  897 
+A = ffffe3f7
+B = 00000381
+C = ffffe076
+Result = 0ffffe076
+Flag = 0001
+PASS
+Test Case  898 
+A = ffffe3ef
+B = 00000382
+C = 00000382
+Result = 000000382
+Flag = 0000
+PASS
+Test Case  899 
+A = ffffe3e7
+B = 00000383
+C = ffffe3e7
+Result = 0ffffe3e7
+Flag = 0001
+PASS
+Test Case  900 
+A = ffffe3df
+B = 00000384
+C = ffffe763
+Result = 0ffffe763
+Flag = 0001
+PASS
+Test Case  901 
+A = ffffe3d7
+B = 00000385
+C = ffffe052
+Result = 0ffffe052
+Flag = 0001
+PASS
+Test Case  902 
+A = ffffe3cf
+B = 00000386
+C = 00000386
+Result = 000000386
+Flag = 0000
+PASS
+Test Case  903 
+A = ffffe3c7
+B = 00000387
+C = ffffe3c7
+Result = 0ffffe3c7
+Flag = 0001
+PASS
+Test Case  904 
+A = ffffe3bf
+B = 00000388
+C = ffffe747
+Result = 0ffffe747
+Flag = 0001
+PASS
+Test Case  905 
+A = ffffe3b7
+B = 00000389
+C = ffffe02e
+Result = 0ffffe02e
+Flag = 0001
+PASS
+Test Case  906 
+A = ffffe3af
+B = 0000038a
+C = 0000038a
+Result = 00000038a
+Flag = 0000
+PASS
+Test Case  907 
+A = ffffe3a7
+B = 0000038b
+C = ffffe3af
+Result = 0ffffe3af
+Flag = 0001
+PASS
+Test Case  908 
+A = ffffe39f
+B = 0000038c
+C = ffffe72b
+Result = 0ffffe72b
+Flag = 0001
+PASS
+Test Case  909 
+A = ffffe397
+B = 0000038d
+C = ffffe00a
+Result = 0ffffe00a
+Flag = 0001
+PASS
+Test Case  910 
+A = ffffe38f
+B = 0000038e
+C = 0000038e
+Result = 00000038e
+Flag = 0000
+PASS
+Test Case  911 
+A = ffffe387
+B = 0000038f
+C = ffffe38f
+Result = 0ffffe38f
+Flag = 0001
+PASS
+Test Case  912 
+A = ffffe37f
+B = 00000390
+C = ffffe70f
+Result = 0ffffe70f
+Flag = 0001
+PASS
+Test Case  913 
+A = ffffe377
+B = 00000391
+C = ffffdfe6
+Result = 0ffffdfe6
+Flag = 0001
+PASS
+Test Case  914 
+A = ffffe36f
+B = 00000392
+C = 00000302
+Result = 000000302
+Flag = 0000
+PASS
+Test Case  915 
+A = ffffe367
+B = 00000393
+C = ffffe3f7
+Result = 0ffffe3f7
+Flag = 0001
+PASS
+Test Case  916 
+A = ffffe35f
+B = 00000394
+C = ffffe6f3
+Result = 0ffffe6f3
+Flag = 0001
+PASS
+Test Case  917 
+A = ffffe357
+B = 00000395
+C = ffffdfc2
+Result = 0ffffdfc2
+Flag = 0001
+PASS
+Test Case  918 
+A = ffffe34f
+B = 00000396
+C = 00000306
+Result = 000000306
+Flag = 0000
+PASS
+Test Case  919 
+A = ffffe347
+B = 00000397
+C = ffffe3d7
+Result = 0ffffe3d7
+Flag = 0001
+PASS
+Test Case  920 
+A = ffffe33f
+B = 00000398
+C = ffffe6d7
+Result = 0ffffe6d7
+Flag = 0001
+PASS
+Test Case  921 
+A = ffffe337
+B = 00000399
+C = ffffdf9e
+Result = 0ffffdf9e
+Flag = 0001
+PASS
+Test Case  922 
+A = ffffe32f
+B = 0000039a
+C = 0000030a
+Result = 00000030a
+Flag = 0000
+PASS
+Test Case  923 
+A = ffffe327
+B = 0000039b
+C = ffffe3bf
+Result = 0ffffe3bf
+Flag = 0001
+PASS
+Test Case  924 
+A = ffffe31f
+B = 0000039c
+C = ffffe6bb
+Result = 0ffffe6bb
+Flag = 0001
+PASS
+Test Case  925 
+A = ffffe317
+B = 0000039d
+C = ffffdf7a
+Result = 0ffffdf7a
+Flag = 0001
+PASS
+Test Case  926 
+A = ffffe30f
+B = 0000039e
+C = 0000030e
+Result = 00000030e
+Flag = 0000
+PASS
+Test Case  927 
+A = ffffe307
+B = 0000039f
+C = ffffe39f
+Result = 0ffffe39f
+Flag = 0001
+PASS
+Test Case  928 
+A = ffffe2ff
+B = 000003a0
+C = ffffe69f
+Result = 0ffffe69f
+Flag = 0001
+PASS
+Test Case  929 
+A = ffffe2f7
+B = 000003a1
+C = ffffdf56
+Result = 0ffffdf56
+Flag = 0001
+PASS
+Test Case  930 
+A = ffffe2ef
+B = 000003a2
+C = 000002a2
+Result = 0000002a2
+Flag = 0000
+PASS
+Test Case  931 
+A = ffffe2e7
+B = 000003a3
+C = ffffe3e7
+Result = 0ffffe3e7
+Flag = 0001
+PASS
+Test Case  932 
+A = ffffe2df
+B = 000003a4
+C = ffffe683
+Result = 0ffffe683
+Flag = 0001
+PASS
+Test Case  933 
+A = ffffe2d7
+B = 000003a5
+C = ffffdf32
+Result = 0ffffdf32
+Flag = 0001
+PASS
+Test Case  934 
+A = ffffe2cf
+B = 000003a6
+C = 00000286
+Result = 000000286
+Flag = 0000
+PASS
+Test Case  935 
+A = ffffe2c7
+B = 000003a7
+C = ffffe3e7
+Result = 0ffffe3e7
+Flag = 0001
+PASS
+Test Case  936 
+A = ffffe2bf
+B = 000003a8
+C = ffffe667
+Result = 0ffffe667
+Flag = 0001
+PASS
+Test Case  937 
+A = ffffe2b7
+B = 000003a9
+C = ffffdf0e
+Result = 0ffffdf0e
+Flag = 0001
+PASS
+Test Case  938 
+A = ffffe2af
+B = 000003aa
+C = 000002aa
+Result = 0000002aa
+Flag = 0000
+PASS
+Test Case  939 
+A = ffffe2a7
+B = 000003ab
+C = ffffe3af
+Result = 0ffffe3af
+Flag = 0001
+PASS
+Test Case  940 
+A = ffffe29f
+B = 000003ac
+C = ffffe64b
+Result = 0ffffe64b
+Flag = 0001
+PASS
+Test Case  941 
+A = ffffe297
+B = 000003ad
+C = ffffdeea
+Result = 0ffffdeea
+Flag = 0001
+PASS
+Test Case  942 
+A = ffffe28f
+B = 000003ae
+C = 0000028e
+Result = 00000028e
+Flag = 0000
+PASS
+Test Case  943 
+A = ffffe287
+B = 000003af
+C = ffffe3af
+Result = 0ffffe3af
+Flag = 0001
+PASS
+Test Case  944 
+A = ffffe27f
+B = 000003b0
+C = ffffe62f
+Result = 0ffffe62f
+Flag = 0001
+PASS
+Test Case  945 
+A = ffffe277
+B = 000003b1
+C = ffffdec6
+Result = 0ffffdec6
+Flag = 0001
+PASS
+Test Case  946 
+A = ffffe26f
+B = 000003b2
+C = 00000222
+Result = 000000222
+Flag = 0000
+PASS
+Test Case  947 
+A = ffffe267
+B = 000003b3
+C = ffffe3f7
+Result = 0ffffe3f7
+Flag = 0001
+PASS
+Test Case  948 
+A = ffffe25f
+B = 000003b4
+C = ffffe613
+Result = 0ffffe613
+Flag = 0001
+PASS
+Test Case  949 
+A = ffffe257
+B = 000003b5
+C = ffffdea2
+Result = 0ffffdea2
+Flag = 0001
+PASS
+Test Case  950 
+A = ffffe24f
+B = 000003b6
+C = 00000206
+Result = 000000206
+Flag = 0000
+PASS
+Test Case  951 
+A = ffffe247
+B = 000003b7
+C = ffffe3f7
+Result = 0ffffe3f7
+Flag = 0001
+PASS
+Test Case  952 
+A = ffffe23f
+B = 000003b8
+C = ffffe5f7
+Result = 0ffffe5f7
+Flag = 0001
+PASS
+Test Case  953 
+A = ffffe237
+B = 000003b9
+C = ffffde7e
+Result = 0ffffde7e
+Flag = 0001
+PASS
+Test Case  954 
+A = ffffe22f
+B = 000003ba
+C = 0000022a
+Result = 00000022a
+Flag = 0000
+PASS
+Test Case  955 
+A = ffffe227
+B = 000003bb
+C = ffffe3bf
+Result = 0ffffe3bf
+Flag = 0001
+PASS
+Test Case  956 
+A = ffffe21f
+B = 000003bc
+C = ffffe5db
+Result = 0ffffe5db
+Flag = 0001
+PASS
+Test Case  957 
+A = ffffe217
+B = 000003bd
+C = ffffde5a
+Result = 0ffffde5a
+Flag = 0001
+PASS
+Test Case  958 
+A = ffffe20f
+B = 000003be
+C = 0000020e
+Result = 00000020e
+Flag = 0000
+PASS
+Test Case  959 
+A = ffffe207
+B = 000003bf
+C = ffffe3bf
+Result = 0ffffe3bf
+Flag = 0001
+PASS
+Test Case  960 
+A = ffffe1ff
+B = 000003c0
+C = ffffe5bf
+Result = 0ffffe5bf
+Flag = 0001
+PASS
+Test Case  961 
+A = ffffe1f7
+B = 000003c1
+C = ffffde36
+Result = 0ffffde36
+Flag = 0001
+PASS
+Test Case  962 
+A = ffffe1ef
+B = 000003c2
+C = 000001c2
+Result = 0000001c2
+Flag = 0000
+PASS
+Test Case  963 
+A = ffffe1e7
+B = 000003c3
+C = ffffe3e7
+Result = 0ffffe3e7
+Flag = 0001
+PASS
+Test Case  964 
+A = ffffe1df
+B = 000003c4
+C = ffffe5a3
+Result = 0ffffe5a3
+Flag = 0001
+PASS
+Test Case  965 
+A = ffffe1d7
+B = 000003c5
+C = ffffde12
+Result = 0ffffde12
+Flag = 0001
+PASS
+Test Case  966 
+A = ffffe1cf
+B = 000003c6
+C = 000001c6
+Result = 0000001c6
+Flag = 0000
+PASS
+Test Case  967 
+A = ffffe1c7
+B = 000003c7
+C = ffffe3c7
+Result = 0ffffe3c7
+Flag = 0001
+PASS
+Test Case  968 
+A = ffffe1bf
+B = 000003c8
+C = ffffe587
+Result = 0ffffe587
+Flag = 0001
+PASS
+Test Case  969 
+A = ffffe1b7
+B = 000003c9
+C = ffffddee
+Result = 0ffffddee
+Flag = 0001
+PASS
+Test Case  970 
+A = ffffe1af
+B = 000003ca
+C = 0000018a
+Result = 00000018a
+Flag = 0000
+PASS
+Test Case  971 
+A = ffffe1a7
+B = 000003cb
+C = ffffe3ef
+Result = 0ffffe3ef
+Flag = 0001
+PASS
+Test Case  972 
+A = ffffe19f
+B = 000003cc
+C = ffffe56b
+Result = 0ffffe56b
+Flag = 0001
+PASS
+Test Case  973 
+A = ffffe197
+B = 000003cd
+C = ffffddca
+Result = 0ffffddca
+Flag = 0001
+PASS
+Test Case  974 
+A = ffffe18f
+B = 000003ce
+C = 0000018e
+Result = 00000018e
+Flag = 0000
+PASS
+Test Case  975 
+A = ffffe187
+B = 000003cf
+C = ffffe3cf
+Result = 0ffffe3cf
+Flag = 0001
+PASS
+Test Case  976 
+A = ffffe17f
+B = 000003d0
+C = ffffe54f
+Result = 0ffffe54f
+Flag = 0001
+PASS
+Test Case  977 
+A = ffffe177
+B = 000003d1
+C = ffffdda6
+Result = 0ffffdda6
+Flag = 0001
+PASS
+Test Case  978 
+A = ffffe16f
+B = 000003d2
+C = 00000142
+Result = 000000142
+Flag = 0000
+PASS
+Test Case  979 
+A = ffffe167
+B = 000003d3
+C = ffffe3f7
+Result = 0ffffe3f7
+Flag = 0001
+PASS
+Test Case  980 
+A = ffffe15f
+B = 000003d4
+C = ffffe533
+Result = 0ffffe533
+Flag = 0001
+PASS
+Test Case  981 
+A = ffffe157
+B = 000003d5
+C = ffffdd82
+Result = 0ffffdd82
+Flag = 0001
+PASS
+Test Case  982 
+A = ffffe14f
+B = 000003d6
+C = 00000146
+Result = 000000146
+Flag = 0000
+PASS
+Test Case  983 
+A = ffffe147
+B = 000003d7
+C = ffffe3d7
+Result = 0ffffe3d7
+Flag = 0001
+PASS
+Test Case  984 
+A = ffffe13f
+B = 000003d8
+C = ffffe517
+Result = 0ffffe517
+Flag = 0001
+PASS
+Test Case  985 
+A = ffffe137
+B = 000003d9
+C = ffffdd5e
+Result = 0ffffdd5e
+Flag = 0001
+PASS
+Test Case  986 
+A = ffffe12f
+B = 000003da
+C = 0000010a
+Result = 00000010a
+Flag = 0000
+PASS
+Test Case  987 
+A = ffffe127
+B = 000003db
+C = ffffe3ff
+Result = 0ffffe3ff
+Flag = 0001
+PASS
+Test Case  988 
+A = ffffe11f
+B = 000003dc
+C = ffffe4fb
+Result = 0ffffe4fb
+Flag = 0001
+PASS
+Test Case  989 
+A = ffffe117
+B = 000003dd
+C = ffffdd3a
+Result = 0ffffdd3a
+Flag = 0001
+PASS
+Test Case  990 
+A = ffffe10f
+B = 000003de
+C = 0000010e
+Result = 00000010e
+Flag = 0000
+PASS
+Test Case  991 
+A = ffffe107
+B = 000003df
+C = ffffe3df
+Result = 0ffffe3df
+Flag = 0001
+PASS
+Test Case  992 
+A = ffffe0ff
+B = 000003e0
+C = ffffe4df
+Result = 0ffffe4df
+Flag = 0001
+PASS
+Test Case  993 
+A = ffffe0f7
+B = 000003e1
+C = ffffdd16
+Result = 0ffffdd16
+Flag = 0001
+PASS
+Test Case  994 
+A = ffffe0ef
+B = 000003e2
+C = 000000e2
+Result = 0000000e2
+Flag = 0000
+PASS
+Test Case  995 
+A = ffffe0e7
+B = 000003e3
+C = ffffe3e7
+Result = 0ffffe3e7
+Flag = 0001
+PASS
+Test Case  996 
+A = ffffe0df
+B = 000003e4
+C = ffffe4c3
+Result = 0ffffe4c3
+Flag = 0001
+PASS
+Test Case  997 
+A = ffffe0d7
+B = 000003e5
+C = ffffdcf2
+Result = 0ffffdcf2
+Flag = 0001
+PASS
+Test Case  998 
+A = ffffe0cf
+B = 000003e6
+C = 000000c6
+Result = 0000000c6
+Flag = 0000
+PASS
+Global PASS
+Simulation is over, check the waveforms.
+Simulation stopped via $stop(1) at time 989900 NS + 0
+../tb/mtm_Alu_tb.v:111     $stop;
+xcelium> 
+xcelium> # finish
+xcelium> exit
+TOOL:	xrun	18.09-s011: Exiting on Sep 08, 2019 at 22:53:42 CEST  (total: 00:00:15)

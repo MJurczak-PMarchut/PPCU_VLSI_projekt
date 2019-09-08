@@ -1,0 +1,175 @@
+Operating system: Linux
+                  0.0.0 Linux 2.6.32-754.6.3.el6.x86_64 #1 SMP Tue Oct 9 17:27:49 UTC 2018 x86_64
+CPU: x86
+     GenuineIntel family 6 model 85 stepping 4
+     1 CPU
+
+GPU: UNKNOWN
+
+Crash reason:  DUMP_REQUESTED
+Crash address: 0xf76080df
+Process uptime: not available
+
+Thread 0 (crashed)
+ 0  libcbreakpad.so + 0x280df
+    eip = 0xf76080df   esp = 0xffc96d00   ebp = 0xffc96d88   ebx = 0xf7637000
+    esi = 0xf7637000   edi = 0xffc96e38   eax = 0x00000000   ecx = 0x00000001
+    edx = 0x00000000   efl = 0x0b98dd64
+    Found by: given as instruction pointer in context
+ 1  libcbreakpad.so + 0x26415
+    eip = 0xf7606415   esp = 0xffc96d90   ebp = 0xffc96ed8
+    Found by: previous frame's frame pointer
+ 2  xmsim!vserror + 0x782
+    eip = 0x08ee6322   esp = 0xffc96ee0   ebp = 0xffc98e34
+    Found by: previous frame's frame pointer
+ 3  xmsim!serror + 0x1a
+    eip = 0x08ee6eba   esp = 0xffc970e0   ebp = 0xffc98e34   ebx = 0x00000000
+    esi = 0xffc97120   edi = 0xffc98e18
+    Found by: call frame info
+ 4  xmsim!ssig_interr + 0x5e
+    eip = 0x08ecdd3e   esp = 0xffc97100   ebp = 0xffc98e34   ebx = 0x0000000b
+    esi = 0xffc97120   edi = 0xffc98e18
+    Found by: call frame info
+ 5  linux-gate.so + 0x400
+    eip = 0xf77ee400   esp = 0xffc971b0   ebp = 0xffc98e34   ebx = 0xfffffff5
+    esi = 0x00000000   edi = 0xffc98e18
+    Found by: call frame info
+ 6  xmsim!Ox6e67d6ab5c4d01fd + 0x262
+    eip = 0x09318815   esp = 0xffc98e3c   ebp = 0xffc98e7c
+    Found by: previous frame's frame pointer
+ 7  xmsim!Ox6e67d6ba18ed30d7 + 0xb6
+    eip = 0x09318cda   esp = 0xffc98e84   ebp = 0xffc98ea8
+    Found by: previous frame's frame pointer
+ 8  xmsim!Ox6e67deec448cd1ac + 0x5cc
+    eip = 0x0931f984   esp = 0xffc98eb0   ebp = 0xffc9cadc
+    Found by: previous frame's frame pointer
+ 9  xmsim!Ox6e67d8a15cf297e0 + 0xba
+    eip = 0x0931fe9d   esp = 0xffc9cae4   ebp = 0xffc9cafc
+    Found by: previous frame's frame pointer
+10  xmsim!Ox6e67d87a10035b76 + 0x19f
+    eip = 0x09320077   esp = 0xffc9cb04   ebp = 0xffc9cf40
+    Found by: previous frame's frame pointer
+11  xmsim!Ox6e67d757210ca4fa + 0xac6
+    eip = 0x0933759d   esp = 0xffc9cf48   ebp = 0xffc9e114
+    Found by: previous frame's frame pointer
+12  xmsim!Ox6e67d757210ca4fa + 0x18e4
+    eip = 0x093383bb   esp = 0xffc9e11c   ebp = 0xffc9e780
+    Found by: previous frame's frame pointer
+13  xmsim!Ox6e67d74a5fa01800 + 0x196
+    eip = 0x09333256   esp = 0xffc9e788   ebp = 0xffc9e7b0
+    Found by: previous frame's frame pointer
+14  xmsim!smGG2MSj5uG + 0x58
+    eip = 0x0933343d   esp = 0xffc9e7b8   ebp = 0xffc9e7d8
+    Found by: previous frame's frame pointer
+15  xmsim!v_D_LRdcnTj2f_hRiu2 + 0xbc0
+    eip = 0x09331064   esp = 0xffc9e7e0   ebp = 0xffc9e878
+    Found by: previous frame's frame pointer
+16  xmsim!rJWd4gbqQzPI1goiEsI + 0x155
+    eip = 0x09331e78   esp = 0xffc9e880   ebp = 0xffc9e8e8
+    Found by: previous frame's frame pointer
+17  xmsim!lmiFeatureExists + 0x14e
+    eip = 0x0933faab   esp = 0xffc9e8f0   ebp = 0xffc9e948
+    Found by: previous frame's frame pointer
+18  xmsim!lmFeatureExists + 0x37
+    eip = 0x0933fee4   esp = 0xffc9e950   ebp = 0xffc9e978
+    Found by: previous frame's frame pointer
+19  xmsim!cdslicFeatureExists + 0x30
+    eip = 0x0939b906   esp = 0xffc9e980   ebp = 0xffca6f78
+    Found by: previous frame's frame pointer
+20  xmsim!ulmFeatureExists + 0x14
+    eip = 0x08ba598b   esp = 0xffc9e9b0   ebp = 0xffca6f78   ebx = 0x00000002
+    Found by: call frame info
+21  xmsim!xc_add_single_core_legacy_to_promo_order + 0x2c
+    eip = 0x080d0fa1   esp = 0xffc9e9d0   ebp = 0xffca6f78   ebx = 0x00000002
+    Found by: call frame info
+22  xmsim!xc_setup_xcelium_promotion_order + 0x2ea
+    eip = 0x080d1928   esp = 0xffc9e9f0   ebp = 0xffca6f78   ebx = 0x00000001
+    esi = 0x00000002
+    Found by: call frame info
+23  xmsim!xc_get_xcelium_core_license_worker + 0x1f
+    eip = 0x080cf9cd   esp = 0xffc9ea00   ebp = 0xffca6f78   ebx = 0x00000000
+    esi = 0xffca7034   edi = 0x00000000
+    Found by: call frame info
+24  xmsim!xc_get_xcelium_core_license_or_die + 0x8
+    eip = 0x080cfb36   esp = 0xffc9ea30   ebp = 0xffca6f78   ebx = 0x00000000
+    esi = 0xffca7034   edi = 0x00000000
+    Found by: call frame info
+25  xmsim!xc_get_xcelium_licenses_or_die + 0x396
+    eip = 0x080d073e   esp = 0xffc9ea40   ebp = 0xffca6f78   ebx = 0x00000000
+    esi = 0xffca7034   edi = 0x00000000
+    Found by: call frame info
+26  xmsim!get_license + 0x387
+    eip = 0x080d2723   esp = 0xffc9ea70   ebp = 0xffca6f78   ebx = 0x00000000
+    esi = 0xffca7034   edi = 0x00000000
+    Found by: call frame info
+27  xmsim!xncmain + 0x6678
+    eip = 0x080dc759   esp = 0xffc9eaa0   ebp = 0xffca6f78   ebx = 0x00000000
+    esi = 0x00000001   edi = 0x00000000
+    Found by: call frame info
+28  xmsim!ncmain + 0x96
+    eip = 0x080d5fe1   esp = 0xffca6f50   ebp = 0xffca6f78   ebx = 0xffca7034
+    esi = 0x00000000   edi = 0x00000000
+    Found by: call frame info
+29  xmsim!main + 0x24
+    eip = 0x095d6c1c   esp = 0xffca6f60   ebp = 0xffca6f78   ebx = 0x00587ff4
+    esi = 0x00000000   edi = 0x00000000
+    Found by: call frame info
+30  libc-2.12.so + 0x16d28
+    eip = 0x0040bd28   esp = 0xffca6f80   ebp = 0xffca7008
+    Found by: previous frame's frame pointer
+31  xmsim!_start + 0x21
+    eip = 0x08078689   esp = 0xffca7010   ebp = 0x00000000
+    Found by: previous frame's frame pointer
+32  xmsim!__i686.get_pc_thunk.bx + 0x4
+    eip = 0x095d6bf8   esp = 0xffca7014   ebp = 0x00000000
+    Found by: stack scanning
+33  xmsim!__libc_csu_fini + 0x10
+    eip = 0x095d6c70   esp = 0xffca7020   ebp = 0xffca7034
+    Found by: stack scanning
+34  0xffca909a
+    eip = 0xffca909a   esp = 0xffca703c   ebp = 0xffca9094
+    Found by: previous frame's frame pointer
+35  0x662d006d
+    eip = 0x662d006d   esp = 0xffca909c   ebp = 0x69736d78
+    Found by: previous frame's frame pointer
+36  xmsim!_fini + 0x9ac9a
+    eip = 0x096e7572   esp = 0xffca9120   ebp = 0x69736d78
+    Found by: stack scanning
+
+Loaded modules:
+0x003d2000 - 0x003f2fff  ld-2.12.so  ???
+0x003f5000 - 0x00588fff  libc-2.12.so  ???  (WARNING: No symbols, libc-2.12.so, A23B20ADB6DA7D77BBD73FE934F549120)
+0x0058e000 - 0x005a6fff  libpthread-2.12.so  ???
+0x005ab000 - 0x005affff  libdl-2.12.so  ???
+0x00754000 - 0x0077dfff  libm-2.12.so  ???
+0x08048000 - 0x0a185fff  xmsim  ???  (main)
+0xf75bf000 - 0xf75ccfff  libnss_files-2.12.so  ???
+0xf75e0000 - 0xf7638fff  libcbreakpad.so  ???  (WARNING: No symbols, libcbreakpad.so, 0B5E25088DA2681F9B721C64512A189E0)
+0xf7643000 - 0xf765efff  libgcc_s.so.1  ???
+0xf765f000 - 0xf77d5fff  libstdc++.so.6.0.22  ???
+0xf77ee000 - 0xf77eefff  linux-gate.so  ???  (WARNING: No symbols, linux-gate.so, CC379127F97A8FCD72F1450B822681580)
+
+******BACKTRACE*****
+vserror [0x8ee6322]
+serror [0x8ee6eba]
+ssig_interr [0x8ecdd3e]
+nc_prepare_to_exit [0x80e416a]
+sexit [0x8ecd182]
+ssig_exit [0x8ecdcc9]
+Ox6e67dce5787bb747 [0x930e925]
+Ox6e67d6ab5c4d01fd [0x9318815]
+Ox6e67d6ba18ed30d7 [0x9318cda]
+Ox6e67deec448cd1ac [0x931f984]
+Ox6e67d8a15cf297e0 [0x931fe9d]
+Ox6e67d87a10035b76 [0x9320077]
+Ox6e67d757210ca4fa [0x933759d]
+Ox6e67d757210ca4fa [0x93383bb]
+Ox6e67d74a5fa01800 [0x9333256]
+smGG2MSj5uG [0x933343d]
+v_D_LRdcnTj2f_hRiu2 [0x9331064]
+rJWd4gbqQzPI1goiEsI [0x9331e78]
+lmiFeatureExists [0x933faab]
+lmFeatureExists [0x933fee4]
+cdslicFeatureExists [0x939b906]
+_start [0x8078689]
+******BACKTRACE END*****

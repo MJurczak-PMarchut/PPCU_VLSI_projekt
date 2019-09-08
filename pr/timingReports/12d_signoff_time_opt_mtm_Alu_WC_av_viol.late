@@ -1,0 +1,15 @@
+
+in2reg       Pinsname: u_mtm_Alu_deserializer/\out_reg[47] /RES, Slack value :8.284, fromClk:      _clk, toClk:      _clk
+
+==========================
+
+GroupType: Async, View:WC_av, Setup
+in2reg       Pinsname: u_mtm_Alu_deserializer/\err_flags_reg[0] /D, Slack value :8.352, fromClk:      _clk, toClk:      _clk
+
+reg2reg       Pinsname: u_mtm_Alu_deserializer/\out_reg[51] /D, Slack value :15.485, fromClk:      _clk, toClk:      _clk
+
+reg2out       Pinsname:                 sout, Slack value :9.170, fromClk:      _clk, toClk:      _clk
+
+==========================
+
+GroupType: Standard, View:WC_av, Setup

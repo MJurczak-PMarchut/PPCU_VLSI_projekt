@@ -1,0 +1,258 @@
+LM_LICENSE_FILE: :5281@192.168.0.214:1718@192.168.0.214
+TMPDIR is being set to /tmp/genus_temp_4442_cadence212_pmarchut_ulM7ec
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 17.13-s033_1, built Thu Feb 15 2018
+Options: -abort_on_error -no_gui -batch -files tcl/synth_mtmAlu.tcl -log genus_mtm -overwrite 
+Date:    Sun Sep 08 16:24:51 2019
+Host:    cadence212 (x86_64 w/Linux 2.6.32-754.6.3.el6.x86_64) (16cores*64cpus*2physical cpus*Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz 22528KB) (264129332KB)
+OS:      CentOS release 6.10 (Final)
+
+Checking out license: Genus_Synthesis
+
+Loading tool scripts...
+Finished loading tool scripts (6 seconds elapsed).
+
+#@ Processing -files option
+@genus 1> source tcl/synth_mtmAlu.tcl
+#@ Begin verbose source tcl/synth_mtmAlu.tcl
+@file(synth_mtmAlu.tcl) 9: set_db information_level 7 
+  Setting attribute of root '/': 'information_level' = 7
+@file(synth_mtmAlu.tcl) 12: source tcl/flow_config.tcl
+Sourcing './tcl/flow_config.tcl' (Sun Sep 08 16:24:57 CEST 2019)...
+#@ Begin verbose source tcl/flow_config.tcl
+@file(flow_config.tcl) 5: set_db design_process_node 180
+  Setting attribute of root '/': 'design_process_node' = 180
+@file(flow_config.tcl) 7: set_db syn_generic_effort express
+  Setting attribute of root '/': 'syn_generic_effort' = express
+@file(flow_config.tcl) 8: set_db syn_map_effort express
+  Setting attribute of root '/': 'syn_map_effort' = express
+@file(flow_config.tcl) 9: set_db syn_opt_effort express
+  Setting attribute of root '/': 'syn_opt_effort' = express
+@file(flow_config.tcl) 11: set_db remove_assigns true
+  Setting attribute of root '/': 'remove_assigns' = true
+@file(flow_config.tcl) 12: set_db optimize_merge_flops false 
+  Setting attribute of root '/': 'optimize_merge_flops' = false
+@file(flow_config.tcl) 14: set_db max_cpus_per_server 1 ; # limiting to 8 CPU
+  Setting attribute of root '/': 'max_cpus_per_server' = 1
+@file(flow_config.tcl) 16: set_db enable_domain_name_check 0
+  Setting attribute of root '/': 'enable_domain_name_check' = 0
+@file(flow_config.tcl) 19: set_db hdl_use_cw_first false 
+  Setting attribute of root '/': 'hdl_use_cw_first' = false
+@file(flow_config.tcl) 20: set_db wlec_set_cdn_synth_root true
+  Setting attribute of root '/': 'wlec_set_cdn_synth_root' = true
+@file(flow_config.tcl) 23: set_db use_power_ground_pin_from_lef true
+  Setting attribute of root '/': 'use_power_ground_pin_from_lef' = true
+@file(flow_config.tcl) 25: set_db hdl_track_filename_row_col                 true   ;#used for cross probing and datapath report. May be memory consuming
+Info   : Enabled hdl_track_file_row_column attribute.
+       : Setting this attribute to 'true' can have an impact on the run time. Use this attribute only when filename, line number, and column information are needed in reports.
+  Setting attribute of root '/': 'hdl_track_filename_row_col' = true
+@file(flow_config.tcl) 26: set_db verification_directory_naming_style        "./LEC"
+  Setting attribute of root '/': 'verification_directory_naming_style' = ./LEC
+#@ End verbose source tcl/flow_config.tcl
+@file(synth_mtmAlu.tcl) 17: read_mmmc "constraints/mmode.tcl"
+Sourcing './constraints/mmode.tcl' (Sun Sep 08 16:24:57 CEST 2019)...
+#@ Begin verbose source constraints/mmode.tcl
+@file(mmode.tcl) 2: create_library_set -name WC_libs -timing [ list /cad/dk/umc180/SUS/SUSLIB_UCL_ss.lib ]
+@file(mmode.tcl) 3: create_library_set -name BC_libs -timing [ list /cad/dk/umc180/SUS/SUSLIB_UCL_ff.lib ]
+@file(mmode.tcl) 6: create_opcond -name op_cond_slow -process 1 -voltage 1.7 -temperature 80
+@file(mmode.tcl) 7: create_opcond -name op_cond_fast -process 1 -voltage 1.9 -temperature 0
+@file(mmode.tcl) 10: create_rc_corner -name WC_rc -temperature 80 -qrc_tech /cad/dk/umc180oa/Rulefiles/QRC/G-DF-MIXED_MODE_RFCMOS18-1.8V_3.3V-1P6M-MMC/qrcTechFile
+@file(mmode.tcl) 11: create_rc_corner -name BC_rc -temperature 0  -qrc_tech /cad/dk/umc180oa/Rulefiles/QRC/G-DF-MIXED_MODE_RFCMOS18-1.8V_3.3V-1P6M-MMC/qrcTechFile
+@file(mmode.tcl) 15: create_timing_condition -name WC_tc -opcond op_cond_slow -library_sets WC_libs
+@file(mmode.tcl) 16: create_timing_condition -name BC_tc -opcond op_cond_fast -library_sets BC_libs
+@file(mmode.tcl) 20: create_delay_corner -name WC_dc -timing_condition WC_tc -rc_corner WC_rc
+@file(mmode.tcl) 21: create_delay_corner -name BC_dc -timing_condition BC_tc -rc_corner BC_rc
+@file(mmode.tcl) 25: create_constraint_mode -name standard_cm -sdc_files [ list ./constraints/mtmAlu.sdc ]
+            Reading file '/home/student/pmarchut/Pobrane/projekt/synth/constraints/mtmAlu.sdc'
+@file(mmode.tcl) 28: create_analysis_view -name WC_av -delay_corner WC_dc -constraint_mode standard_cm
+@file(mmode.tcl) 29: create_analysis_view -name BC_av -delay_corner BC_dc -constraint_mode standard_cm
+@file(mmode.tcl) 32: set_analysis_view -setup [ list WC_av ] -hold [ list BC_av ]
+            Reading file '/cad/dk/umc180/SUS/SUSLIB_UCL_ss.lib'
+    Loading library SUSLIB_UCL_ss.lib
+Info    : Missing library level attribute. [LBR-516]
+        : slew_derate_from_library not specified in the library, using .lib default of 1. (File /cad/dk/umc180/SUS/SUSLIB_UCL_ss.lib, Line 8)
+
+  Message Summary for Library SUSLIB_UCL_ss.lib:
+  **********************************************
+  Could not find an attribute in the library. [LBR-436]: 143
+  Missing library level attribute. [LBR-516]: 1
+  **********************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.700000, 80.000000) in library 'SUSLIB_UCL_ss.lib'.
+        : The nominal operating condition represents either the nominal PVT values if specified in the library source, or the default PVT values (1.0, 1.0, 1.0).
+        Cell 'UCL_CAP5' has no outputs.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'UCL_CAP5' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Otherwise, the library cell will be marked as unusable and as timing model.
+        Cell 'UCL_CAP5' has no outputs.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'UCL_CAP5' must have an output pin.
+        Cell 'UCL_CAP6' has no outputs.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'UCL_CAP6' must have an output pin.
+        Cell 'UCL_CAP6' has no outputs.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'UCL_CAP6' must have an output pin.
+        Cell 'UCL_CAP7' has no outputs.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'UCL_CAP7' must have an output pin.
+        Cell 'UCL_CAP7' has no outputs.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'UCL_CAP7' must have an output pin.
+        Cell 'UCL_CAP8' has no outputs.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'UCL_CAP8' must have an output pin.
+        Cell 'UCL_CAP8' has no outputs.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'UCL_CAP8' must have an output pin.
+        Cell 'UCL_CAP9' has no outputs.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'UCL_CAP9' must have an output pin.
+        Cell 'UCL_CAP9' has no outputs.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'UCL_CAP9' must have an output pin.
+        Cell 'UCL_FILL' has no outputs.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'UCL_FILL' must have an output pin.
+        Cell 'UCL_FILL' has no outputs.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'UCL_FILL' must have an output pin.
+Info    : Set default library domain. [LBR-109]
+        : The default library domain is 'library_domain:WC_tc'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'CIN' and 'S' in libcell 'UCL_FA' is 'pos_unate', but unateness determined from function is 'non_unate'.
+        : The 'timing_sense' attribute will be respected.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'CIN' and 'S' in libcell 'UCL_FA' is 'neg_unate', but unateness determined from function is 'non_unate'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CIN' and 'S' in libcell 'UCL_FA'.
+        : Setting the 'timing_sense' to non_unate.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'B' and 'S' in libcell 'UCL_FA' is 'pos_unate', but unateness determined from function is 'non_unate'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'B' and 'S' in libcell 'UCL_FA' is 'neg_unate', but unateness determined from function is 'non_unate'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'UCL_FA'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'A' and 'S' in libcell 'UCL_FA' is 'pos_unate', but unateness determined from function is 'non_unate'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'A' and 'S' in libcell 'UCL_FA' is 'neg_unate', but unateness determined from function is 'non_unate'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'UCL_FA'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'SEL' and 'AUS' in libcell 'UCL_MUX2' is 'pos_unate', but unateness determined from function is 'non_unate'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'SEL' and 'AUS' in libcell 'UCL_MUX2' is 'neg_unate', but unateness determined from function is 'non_unate'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'SEL' and 'AUS' in libcell 'UCL_MUX2'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'SEL' and 'AUS' in libcell 'UCL_MUX2A' is 'pos_unate', but unateness determined from function is 'non_unate'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'SEL' and 'AUS' in libcell 'UCL_MUX2A' is 'neg_unate', but unateness determined from function is 'non_unate'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'SEL' and 'AUS' in libcell 'UCL_MUX2A'.
+Info    : Setting the maximum print count of this message to 10 if information_level is less than 9. [LBR-161]
+        : To print all the warning messages, set the information_level to 9.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'SEL' and 'AUS' in libcell 'UCL_MUX2B'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'EIN1' and 'AUS' in libcell 'UCL_XOR'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'EIN0' and 'AUS' in libcell 'UCL_XOR'.
+  Library has 34 usable logic and 7 usable sequential lib-cells.
+#@ End verbose source constraints/mmode.tcl
+@file(synth_mtmAlu.tcl) 20: set_db init_power_nets  {vddd vddb}
+This attribute has no effect on the tool operation.
+  Setting attribute of root '/': 'init_power_nets' = vddd vddb
+@file(synth_mtmAlu.tcl) 21: set_db init_ground_nets {gndd gndb}
+This attribute has no effect on the tool operation.
+  Setting attribute of root '/': 'init_ground_nets' = gndd gndb
+@file(synth_mtmAlu.tcl) 24: read_physical -lef "/cad/dk/umc180/SUS/SUSLIB_UCL_tech.lef /cad/dk/umc180/SUS/SUSLIB_UCL.lef"
+
+  According to lef_library, there are total 6 routing layers [ V(3) / H(3) ]
+
+@file(synth_mtmAlu.tcl) 27: puts "--------------------------------------------------------------------------------"
+--------------------------------------------------------------------------------
+@file(synth_mtmAlu.tcl) 28: puts "-- HDL READ --------------------------------------------------------------------"
+-- HDL READ --------------------------------------------------------------------
+@file(synth_mtmAlu.tcl) 29: puts "--------------------------------------------------------------------------------"
+--------------------------------------------------------------------------------
+@file(synth_mtmAlu.tcl) 32: read_hdl -v2001 ../rtl/mtm_Alu.v ../rtl/mtm_Alu_core.v ../rtl/mtm_Alu_deserializer.v ../rtl/mtm_Alu_serializer.v 
+            Reading Verilog file '../rtl/mtm_Alu.v'
+            Reading Verilog file '../rtl/mtm_Alu_core.v'
+            Reading Verilog file '../rtl/mtm_Alu_deserializer.v'
+            Reading Verilog file '../rtl/mtm_Alu_serializer.v'
+@file(synth_mtmAlu.tcl) 33: suspend
+
+Execution has been suspended temporarily.
+Enter 'resume' to continue.
+Enter 'stop_suspend' to stop script execution
+[SUSPEND]genus:root: 1> resume
+
+Resuming...
+@file(synth_mtmAlu.tcl) 38: puts "--------------------------------------------------------------------------------"
+--------------------------------------------------------------------------------
+@file(synth_mtmAlu.tcl) 39: puts "-- ELABORATION -----------------------------------------------------------------"
+-- ELABORATION -----------------------------------------------------------------
+@file(synth_mtmAlu.tcl) 40: puts "--------------------------------------------------------------------------------"
+--------------------------------------------------------------------------------
+@file(synth_mtmAlu.tcl) 41: elaborate
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'mtm_Alu' from file '../rtl/mtm_Alu.v'.
+Info    : Elaborating Subdesign. [ELAB-2]
+        : Elaborating block 'mtm_Alu_deserializer' from file '../rtl/mtm_Alu_deserializer.v'.
+Info    : Elaborating Subdesign. [ELAB-2]
+        : Elaborating block 'mtm_Alu_core' from file '../rtl/mtm_Alu_core.v'.
+Info    : Unused module input port. [CDFG-500]
+        : Input port 'clk' is not used in module 'mtm_Alu_core' in file '../rtl/mtm_Alu_core.v' on line 14.
+        : The value of the input port is not used within the design.
+Info    : Elaborating Subdesign. [ELAB-2]
+        : Elaborating block 'mtm_Alu_serializer' from file '../rtl/mtm_Alu_serializer.v'.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'mtm_Alu'.
+Checking for analog nets.... 
+Check completed for analog nets.
+Info: Checking for source rtl...
+Info: Check completed for source rtl...
+        Computing net loads.
+UM: Capturing floorplan image ...
+UM:  flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:             8             13                                      elaborate
+@file(synth_mtmAlu.tcl) 45: suspend
+
+Execution has been suspended temporarily.
+Enter 'resume' to continue.
+Enter 'stop_suspend' to stop script execution
+[SUSPEND]genus:root: 0> 
+Another Ctrl-C within 1 second will terminate the tool.
+
+Abnormal exit.
+Encountered a problem while exiting.
+LM_LICENSE_FILE: :5281@192.168.0.214:1718@192.168.0.214
+TMPDIR is being set to /tmp/genus_temp_11096_cadence212_pmarchut_PoV43R
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 17.13-s033_1, built Thu Feb 15 2018
+Options: -abort_on_error -no_gui -batch -files tcl/synth_mtmAlu.tcl -log genus_mtm -overwrite 
+Date:    Sun Sep 08 16:26:41 2019
+Host:    cadence212 (x86_64 w/Linux 2.6.32-754.6.3.el6.x86_64) (16cores*64cpus*2physical cpus*Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz 22528KB) (264129332KB)
+OS:      CentOS release 6.10 (Final)
+
+Checking out license: Genus_Synthesis
+
+Loading tool scripts...
+
+Another Ctrl-C within 1 second will terminate the tool.
+
+Another Ctrl-C within 1 second will terminate the tool.
+
+Another Ctrl-C within 1 second will terminate the tool.
+Abnormal exit.

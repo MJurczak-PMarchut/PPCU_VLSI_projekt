@@ -1,0 +1,8 @@
+Depth  Name                        #Inst  Area (um^2) 
+------------------------------------------------------
+0      mtm_Alu                     860    33762.3552  
+1      u_mtm_Alu_serializer        194    7431.7824   
+1      u_mtm_Alu_core              398    12901.9392  
+1      u_mtm_Alu_deserializer      263    13283.4816  
+2      u_mtm_Alu_core/sub_56_39    67     2504.9088   
+2      u_mtm_Alu_core/add_50_39    33     2115.072    

@@ -1,0 +1,47 @@
+@file(synth_mtmAlu.tcl) 38: puts "--------------------------------------------------------------------------------"
+--------------------------------------------------------------------------------
+@file(synth_mtmAlu.tcl) 39: puts "-- ELABORATION -----------------------------------------------------------------"
+-- ELABORATION -----------------------------------------------------------------
+@file(synth_mtmAlu.tcl) 40: puts "--------------------------------------------------------------------------------"
+--------------------------------------------------------------------------------
+@file(synth_mtmAlu.tcl) 41: elaborate
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'mtm_Alu' from file '../rtl/mtm_Alu.v'.
+Info    : Elaborating Subdesign. [ELAB-2]
+        : Elaborating block 'mtm_Alu_deserializer' from file '../rtl/mtm_Alu_deserializer.v'.
+Info    : Elaborating Subdesign. [ELAB-2]
+        : Elaborating block 'mtm_Alu_core' from file '../rtl/mtm_Alu_core.v'.
+Info    : Unused module input port. [CDFG-500]
+        : Input port 'clk' is not used in module 'mtm_Alu_core' in file '../rtl/mtm_Alu_core.v' on line 14.
+        : The value of the input port is not used within the design.
+Info    : Unused instance port. [ELABUTL-132]
+        : Unused Port 'clk' of instance 'u_mtm_Alu_core' of module 'mtm_Alu_core' inside module 'mtm_Alu' in file '../rtl/mtm_Alu.v' on line 43.
+Info    : Elaborating Subdesign. [ELAB-2]
+        : Elaborating block 'mtm_Alu_serializer' from file '../rtl/mtm_Alu_serializer.v'.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'data_case' in module 'mtm_Alu_serializer' in file '../rtl/mtm_Alu_serializer.v' on line 27.
+        : A flip-flop or latch that was inferred for an unused signal or variable was removed. Use '::legacy::set_attribute hdl_preserve_unused_registers true /' to preserve the flip-flop or latch.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'crc' in module 'mtm_Alu_serializer' in file '../rtl/mtm_Alu_serializer.v' on line 27.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'parity' in module 'mtm_Alu_serializer' in file '../rtl/mtm_Alu_serializer.v' on line 27.
+Warning : Unconnected instance input port detected. [ELABUTL-124]
+        : unconnected input port 'clk' of instance 'u_mtm_Alu_core' of module 'mtm_Alu_core' in file '../rtl/mtm_Alu.v' on line 43, column 28.
+        : Use the 'hdl_unconnected_input_port_value' attribute to control treatment of unconnected input port during elaboration.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'mtm_Alu'.
+Checking for analog nets.... 
+Check completed for analog nets.
+Info: Checking for source rtl...
+Info: Check completed for source rtl...
+        Computing net loads.
+UM: Capturing floorplan image ...
+UM:  flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:             8              8                                      elaborate
+@file(synth_mtmAlu.tcl) 43: suspend
+
+Execution has been suspended temporarily.
+Enter 'resume' to continue.
+Enter 'stop_suspend' to stop script execution
+[SUSPEND]genus:root: 1> 
+

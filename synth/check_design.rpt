@@ -1,0 +1,19 @@
+  Checking the design.
+
+ 	 Check Design Report
+	 -------------------- 
+
+  Unresolved References & Empty Modules
+  ------------------------------------- 
+No unresolved references in design 'mtm_Alu'
+
+No empty modules in design 'mtm_Alu'
+
+  Done Checking the design.
+@file(synth_mtmAlu.tcl) 116: suspend
+
+Execution has been suspended temporarily.
+Enter 'resume' to continue.
+Enter 'stop_suspend' to stop script execution
+[SUSPEND]genus:root: -1> 
+

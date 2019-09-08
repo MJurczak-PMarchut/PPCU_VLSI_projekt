@@ -1,0 +1,74 @@
+/******************************************************************************
+ * (C) Copyright 2019 AGH UST All Rights Reserved
+ *
+ * MODULE:    mtm_Alu_core
+ * PROJECT:   PPCU_VLSI
+ * AUTHORS:
+ * DATE:
+ *******************************************************************************/
+
+module mtm_Alu_core(
+	input wire [32:0] A,
+	input wire [32:0] B,
+	input wire [2:0] OP,
+	//input wire clk,
+	input wire rst_n,
+	input wire data_ready_in,
+	input wire [6:0] err_flags,
+	output wire data_ready_out,
+	output reg [32:0] C,
+	output reg [7:0] CTL // ERROR, FLAGS, CRC
+);
+
+localparam AND = 0;
+localparam OR = 1;
+localparam ADD = 4;
+localparam SUB = 5;
+
+assign data_ready_out = data_ready_in;
+
+always @(posedge data_ready_in or negedge rst_n)
+    if(!rst_n)
+        begin
+            //data_ready_out = 1'b0;
+            C = 33'b0;
+            CTL = 8'b0;
+        end
+    else
+        begin
+            CTL = 8'b0;
+            C = 33'b0;
+            if(err_flags == 7'b0)
+                begin
+                    case(OP)
+                        AND: 
+                            C = A & B; 
+                        OR: 
+                            C = A | B; 
+                        ADD: 
+                            begin
+                                C = A + B; 
+                                CTL[6] = C[32];
+                                CTL[5] = (~(A[31] ^ B[31])) & (A[31] ^ C[31]);
+                            end
+                        SUB: 
+                            begin
+                                C = A - B; 
+                                CTL[6] = C[32];
+                                CTL[5] = ((A[31] ^ B[31]) & ~(B[31] ^ C[31]));
+                            end
+                        default: CTL = CTL | 8'b10010010;
+                    endcase
+                    CTL[4] = (C[31:0] == 32'b0)? 1'b1 : 1'b0;
+                    CTL[3] = C[31];
+                   // data_ready_out = 1'b1;
+                end
+            else
+                begin
+                    CTL[7:1] = err_flags;
+                   // data_ready_out =1'b1;
+                end
+        end
+
+
+endmodule
